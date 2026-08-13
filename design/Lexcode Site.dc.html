@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/modernist-169e1921-0b2b-4bdf-94c3-dd505aed93ba/styles.css">
+<script src="_ds/modernist-169e1921-0b2b-4bdf-94c3-dd505aed93ba/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; }
+  a { color: var(--color-accent); text-underline-offset: 3px; }
+  a:hover { color: var(--color-accent-700); }
+  html { scroll-behavior: smooth; }
+</style>
+</helmet>
+
+<div style="background:var(--color-bg);color:var(--color-text);font-family:var(--font-body)">
+
+  <!-- NAV -->
+  <div style="position:sticky;top:0;z-index:20;background:var(--color-bg);border-bottom:2px solid var(--color-text)">
+    <div style="max-width:1240px;margin:0 auto;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="#top" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--color-text)">
+        <div style="width:34px;height:34px;border:2px solid var(--color-text);padding:6px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start"><div style="height:3px;width:100%;background:var(--color-text)"></div><div style="width:9px;height:9px;background:var(--color-accent)"></div></div>
+        <div style="font-size:22px;font-weight:800;letter-spacing:-0.03em">Lexcode</div>
+      </a>
+      <div style="display:flex;align-items:center;gap:28px">
+        <a href="#services" style="font-size:14px;font-weight:800;color:var(--color-text);text-decoration:none" style-hover="color:var(--color-accent)">Services</a>
+        <a href="#process" style="font-size:14px;font-weight:800;color:var(--color-text);text-decoration:none" style-hover="color:var(--color-accent)">Process</a>
+        <a href="#about" style="font-size:14px;font-weight:800;color:var(--color-text);text-decoration:none" style-hover="color:var(--color-accent)">About</a>
+        <a href="{{ bookingUrl }}" style="font-size:14px;font-weight:800;background:var(--color-accent);color:var(--color-bg);text-decoration:none;padding:11px 18px;display:inline-flex;align-items:center;gap:8px" style-hover="background:var(--color-accent-600)">Book a call <span>&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div id="top" style="max-width:1240px;margin:0 auto;padding:0 40px">
+    <div style="display:grid;grid-template-columns:1.45fr 1fr;gap:0;border-bottom:2px solid var(--color-divider)">
+      <div style="padding:80px 48px 72px 0">
+        <div style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent);margin-bottom:24px">Software studio of one &middot; available for new work</div>
+        <h1 style="font-size:76px;font-weight:800;letter-spacing:-0.04em;line-height:0.98;margin:0 0 28px;text-wrap:balance">Tell me what you need. I&rsquo;ll build the thing that does it.</h1>
+        <p style="font-size:18px;line-height:1.55;max-width:560px;color:var(--color-neutral-800);margin:0 0 36px">I&rsquo;m Alex &mdash; an engineer who takes a described problem and returns working software. Web apps, mobile apps, internal tools, AI features. You talk in plain language; I handle the rest.</p>
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+          <a href="{{ bookingUrl }}" style="font-size:15px;font-weight:800;background:var(--color-accent);color:var(--color-bg);text-decoration:none;padding:16px 22px;display:inline-flex;align-items:center;gap:10px" style-hover="background:var(--color-accent-600)">Book a 30-min call <span>&rarr;</span></a>
+          <a href="#contact" style="font-size:15px;font-weight:800;color:var(--color-text);text-decoration:none;padding:16px 22px;border:2px solid var(--color-text)" style-hover="background:var(--color-surface)">Describe your project</a>
+        </div>
+      </div>
+      <div style="border-left:2px solid var(--color-divider);display:flex;flex-direction:column">
+        <div style="flex:1;min-height:340px;background:var(--color-surface);padding:40px 32px;display:flex;flex-direction:column;justify-content:center;gap:20px">
+          <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-700)">what you said</div>
+          <div style="background:var(--color-bg);border:2px solid var(--color-text);padding:16px">
+            <div style="font-size:17px;font-weight:800;letter-spacing:-0.015em;line-height:1.3">&ldquo;People should be able to book a slot online, and I want to stop answering the phone.&rdquo;</div>
+          </div>
+          <div style="height:2px;background:var(--color-divider)"></div>
+          <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-700)">what you got</div>
+          <div style="background:var(--color-bg);border:2px solid var(--color-text)">
+            <div style="display:flex;align-items:center;gap:6px;padding:8px 10px;border-bottom:2px solid var(--color-text)">
+              <div style="width:8px;height:8px;background:var(--color-text)"></div>
+              <div style="width:8px;height:8px;background:var(--color-text)"></div>
+              <div style="width:8px;height:8px;background:var(--color-accent)"></div>
+              <div style="margin-left:8px;font-size:10px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">booking.yourshop.com</div>
+            </div>
+            <div style="padding:16px;display:flex;flex-direction:column;gap:12px">
+              <div style="font-size:13px;font-weight:800;letter-spacing:-0.01em">Pick a time</div>
+              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px">
+                <div style="font-size:10px;font-weight:800;padding:8px 0 8px 6px;background:var(--color-neutral-200);color:var(--color-neutral-500)">13:00</div>
+                <div style="font-size:10px;font-weight:800;padding:8px 0 8px 6px;background:var(--color-neutral-200);color:var(--color-neutral-500)">13:30</div>
+                <div style="font-size:10px;font-weight:800;padding:8px 0 8px 6px;background:var(--color-accent);color:var(--color-bg)">14:30</div>
+                <div style="font-size:10px;font-weight:800;padding:8px 0 8px 6px;background:var(--color-neutral-200);color:var(--color-neutral-500)">15:00</div>
+              </div>
+              <div style="background:var(--color-accent);color:var(--color-bg);font-size:10px;font-weight:800;padding:9px 12px;align-self:flex-start">Confirm booking</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div id="services" style="max-width:1240px;margin:0 auto;padding:0 40px">
+    <div style="padding:72px 0 32px;display:flex;align-items:flex-end;justify-content:space-between;gap:32px">
+      <div>
+        <div style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:14px">01 &mdash; What I build</div>
+        <h2 style="font-size:44px;font-weight:800;letter-spacing:-0.03em;line-height:1.05;margin:0;max-width:640px">Whatever the idea is, it ends up as something people can actually use.</h2>
+      </div>
+      <div style="font-size:13px;line-height:1.6;color:var(--color-neutral-700);max-width:260px">Most projects are one of these. If yours is a mix, that&rsquo;s normal &mdash; say so on the call.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--color-divider);border-left:2px solid var(--color-divider)">
+      <sc-for list="{{ services }}" as="s" hint-placeholder-count="6">
+        <div style="border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);padding:28px 24px 32px;display:flex;flex-direction:column;gap:10px;min-height:220px" style-hover="background:var(--color-surface)">
+          <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-accent)">{{ s.no }}</div>
+          <div style="font-size:22px;font-weight:800;letter-spacing:-0.02em;line-height:1.1">{{ s.title }}</div>
+          <div style="font-size:14px;line-height:1.55;color:var(--color-neutral-800)">{{ s.body }}</div>
+          <div style="margin-top:auto;font-size:12px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">{{ s.meta }}</div>
+        </div>
+      </sc-for>
+      <a href="{{ bookingUrl }}" style="border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);padding:28px 24px 32px;display:flex;flex-direction:column;gap:10px;min-height:220px;background:var(--color-accent);color:var(--color-bg);text-decoration:none" style-hover="background:var(--color-accent-600)">
+        <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace">09</div>
+        <div style="font-size:22px;font-weight:800;letter-spacing:-0.02em;line-height:1.1">Not sure which of these you need?</div>
+        <div style="font-size:14px;line-height:1.55">That&rsquo;s the most common way people arrive here. Describe the problem and I&rsquo;ll name the shape of it.</div>
+        <div style="margin-top:auto;font-size:14px;font-weight:800;display:flex;gap:8px">Book a 30-min call <span>&rarr;</span></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- WORK -->
+  <div id="work" style="max-width:1240px;margin:0 auto;padding:0 40px">
+    <div style="padding:72px 0 28px">
+      <div style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:14px">02 &mdash; Selected work</div>
+      <h2 style="font-size:44px;font-weight:800;letter-spacing:-0.03em;line-height:1.05;margin:0 0 10px;max-width:700px">Client names are under NDA. What I built isn&rsquo;t.</h2>
+      <p style="font-size:15px;line-height:1.6;color:var(--color-neutral-700);max-width:560px;margin:0">Six real systems, running inside real companies. Ask me about any of them on the call &mdash; I can go as deep as you like on how they work.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--color-divider);border-left:2px solid var(--color-divider)">
+
+      <div style="border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);padding:24px">
+        <div style="height:184px;background:var(--color-surface);padding:18px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="display:flex;gap:8px">
+            <div style="flex:1;border:2px solid var(--color-text);padding:6px 8px">
+              <div style="font-size:9px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-700)">revenue</div>
+              <div style="font-size:15px;font-weight:800;letter-spacing:-0.02em">&#8593; 12%</div>
+            </div>
+            <div style="flex:1;border:2px solid var(--color-text);padding:6px 8px">
+              <div style="font-size:9px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-700)">margin</div>
+              <div style="font-size:15px;font-weight:800;letter-spacing:-0.02em">31%</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-end;gap:6px;height:52%;border-bottom:2px solid var(--color-text)">
+            <div style="flex:1;height:38%;background:var(--color-text)"></div>
+            <div style="flex:1;height:62%;background:var(--color-text)"></div>
+            <div style="flex:1;height:48%;background:var(--color-text)"></div>
+            <div style="flex:1;height:82%;background:var(--color-accent)"></div>
+            <div style="flex:1;height:56%;background:var(--color-text)"></div>
+            <div style="flex:1;height:70%;background:var(--color-text)"></div>
+          </div>
+        </div>
+        <div style="padding:18px 0 0;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">reporting &amp; analytics</div>
+          <div style="font-size:20px;font-weight:800;letter-spacing:-0.02em">Reporting platform</div>
+          <div style="font-size:14px;line-height:1.55;color:var(--color-neutral-800)">A web platform where a company&rsquo;s reports and dashboards live in one place, with access controlled per team, so decisions come from current numbers instead of a spreadsheet someone exported last month.</div>
+        </div>
+      </div>
+
+      <div style="border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);padding:24px">
+        <div style="height:184px;background:var(--color-surface);padding:18px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div style="font-size:11px;font-weight:800">Floor 3</div>
+            <div style="font-size:9px;font-family:ui-monospace,Menlo,monospace;background:var(--color-accent);color:var(--color-bg);padding:3px 6px">Tue 14 Oct</div>
+          </div>
+          <div style="flex:1;display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(4,1fr);gap:5px">
+            <div style="background:var(--color-neutral-300)"></div>
+            <div style="background:var(--color-neutral-300)"></div>
+            <div style="background:var(--color-text)"></div>
+            <div style="background:var(--color-neutral-300)"></div>
+            <div style="background:var(--color-text)"></div>
+            <div style="background:var(--color-neutral-300)"></div>
+            <div style="background:var(--color-text)"></div>
+            <div style="background:var(--color-neutral-300)"></div>
+            <div style="background:var(--color-accent)"></div>
+            <div style="background:var(--color-neutral-300)"></div>
+            <div style="background:var(--color-neutral-300)"></div>
+            <div style="background:var(--color-text)"></div>
+            <div style="grid-column:span 2;background:var(--color-neutral-200);border:2px solid var(--color-neutral-400)"></div>
+            <div style="background:var(--color-neutral-300)"></div>
+            <div style="background:var(--color-text)"></div>
+            <div style="background:var(--color-neutral-300)"></div>
+            <div style="background:var(--color-neutral-300)"></div>
+            <div style="background:var(--color-text)"></div>
+            <div style="background:var(--color-neutral-300)"></div>
+            <div style="background:var(--color-neutral-300)"></div>
+            <div style="background:var(--color-neutral-300)"></div>
+            <div style="background:var(--color-text)"></div>
+            <div style="background:var(--color-neutral-300)"></div>
+          </div>
+          <div style="display:flex;gap:14px;font-size:9px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-700)">
+            <div style="display:flex;align-items:center;gap:5px"><div style="width:8px;height:8px;background:var(--color-accent)"></div>your seat</div>
+            <div style="display:flex;align-items:center;gap:5px"><div style="width:8px;height:8px;background:var(--color-text)"></div>taken</div>
+            <div style="display:flex;align-items:center;gap:5px"><div style="width:8px;height:8px;background:var(--color-neutral-300)"></div>free</div>
+          </div>
+        </div>
+        <div style="padding:18px 0 0;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">workplace &middot; hybrid office</div>
+          <div style="font-size:20px;font-weight:800;letter-spacing:-0.02em">Desk booking</div>
+          <div style="font-size:14px;line-height:1.55;color:var(--color-neutral-800)">Staff open the real floor plan of their building, pick a seat for a given day and see who else is in. Office managers stopped running the seating chart by hand.</div>
+        </div>
+      </div>
+
+      <div style="border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);padding:24px">
+        <div style="height:184px;background:var(--color-surface);padding:18px;display:flex;flex-direction:column;justify-content:center;gap:10px">
+          <div style="background:var(--color-bg);border:2px solid var(--color-text);padding:12px">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+              <div style="width:18px;height:18px;background:var(--color-text)"></div>
+              <div style="font-size:10px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-700)">Maria thanked Ion</div>
+            </div>
+            <div style="font-size:12px;font-weight:800;letter-spacing:-0.01em;line-height:1.35">&ldquo;Stayed late to get the client migration over the line with me.&rdquo;</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <div style="background:var(--color-accent);color:var(--color-bg);font-size:11px;font-weight:800;padding:6px 10px">+150 points</div>
+            <div style="height:2px;flex:1;background:var(--color-divider)"></div>
+            <div style="font-size:9px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-700)">redeemable</div>
+          </div>
+        </div>
+        <div style="padding:18px 0 0;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">people &amp; culture</div>
+          <div style="font-size:20px;font-weight:800;letter-spacing:-0.02em">Employee recognition</div>
+          <div style="font-size:14px;line-height:1.55;color:var(--color-neutral-800)">Anyone can nominate a colleague, say in their own words what that person did, and the recognition turns into points they can actually spend. HR sees the whole picture.</div>
+        </div>
+      </div>
+
+      <div style="border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);padding:24px">
+        <div style="height:184px;background:var(--color-surface);padding:18px;display:flex;flex-direction:column;justify-content:space-between">
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:20px;height:20px;background:var(--color-text);color:var(--color-bg);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center">1</div>
+              <div style="height:8px;flex:1;background:var(--color-text)"></div>
+              <div style="font-size:9px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-700)">done</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:20px;height:20px;background:var(--color-text);color:var(--color-bg);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center">2</div>
+              <div style="height:8px;flex:1;background:var(--color-text)"></div>
+              <div style="font-size:9px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-700)">done</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:20px;height:20px;background:var(--color-accent);color:var(--color-bg);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center">3</div>
+              <div style="height:8px;flex:1;background:var(--color-neutral-300)"></div>
+              <div style="font-size:9px;font-family:ui-monospace,Menlo,monospace;color:var(--color-accent-700)">now</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <div style="width:20px;height:20px;border:2px solid var(--color-neutral-400);color:var(--color-neutral-500);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center">4</div>
+              <div style="height:8px;flex:1;background:var(--color-neutral-300)"></div>
+            </div>
+          </div>
+          <div>
+            <div style="font-size:9px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-700);margin-bottom:5px">course progress</div>
+            <div style="height:12px;background:var(--color-neutral-300);display:flex">
+              <div style="width:62%;background:var(--color-accent)"></div>
+            </div>
+          </div>
+        </div>
+        <div style="padding:18px 0 0;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">learning &amp; onboarding</div>
+          <div style="font-size:20px;font-weight:800;letter-spacing:-0.02em">Course platform</div>
+          <div style="font-size:14px;line-height:1.55;color:var(--color-neutral-800)">Courses, lessons and progress for a company&rsquo;s own staff &mdash; each person picks up where they left off, and managers can see who has finished what.</div>
+        </div>
+      </div>
+
+      <div style="border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);padding:24px">
+        <div style="height:184px;background:var(--color-surface);padding:16px;display:flex;flex-direction:column;gap:7px;justify-content:center">
+          <div style="display:flex;align-items:center;gap:8px;background:var(--color-bg);border:2px solid var(--color-text);padding:8px 10px">
+            <div style="height:8px;flex:1;background:var(--color-text)"></div>
+            <div style="font-size:9px;font-family:ui-monospace,Menlo,monospace;background:var(--color-accent);color:var(--color-bg);padding:3px 6px">approved</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;background:var(--color-bg);border:2px solid var(--color-text);padding:8px 10px">
+            <div style="height:8px;flex:1;background:var(--color-text)"></div>
+            <div style="font-size:9px;font-family:ui-monospace,Menlo,monospace;border:2px solid var(--color-neutral-400);color:var(--color-neutral-700);padding:1px 5px">waiting</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;background:var(--color-bg);border:2px solid var(--color-text);padding:8px 10px">
+            <div style="height:8px;flex:1;background:var(--color-text)"></div>
+            <div style="font-size:9px;font-family:ui-monospace,Menlo,monospace;background:var(--color-accent);color:var(--color-bg);padding:3px 6px">repaid</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:4px">
+            <div style="font-size:9px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-700)">request &rarr; approval &rarr; money back</div>
+          </div>
+        </div>
+        <div style="padding:18px 0 0;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">internal operations</div>
+          <div style="font-size:20px;font-weight:800;letter-spacing:-0.02em">Purchasing &amp; expenses</div>
+          <div style="font-size:14px;line-height:1.55;color:var(--color-neutral-800)">One place to ask the company to buy something &mdash; or to claim back what you already paid for. Requests, approvals and reimbursements are tracked instead of living in inboxes.</div>
+        </div>
+      </div>
+
+      <div style="border-right:2px solid var(--color-divider);border-bottom:2px solid var(--color-divider);padding:24px">
+        <div style="height:184px;background:var(--color-surface);padding:18px;display:flex;align-items:center;justify-content:center;gap:16px">
+          <div style="width:78px;height:100%;max-height:150px;border:2px solid var(--color-text);background:var(--color-bg);padding:8px;display:flex;flex-direction:column;gap:6px">
+            <div style="height:4px;width:26px;background:var(--color-neutral-400);margin:0 auto"></div>
+            <div style="flex:1;border:2px dashed var(--color-neutral-400);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:var(--color-accent)">+</div>
+            <div style="background:var(--color-accent);color:var(--color-bg);font-size:8px;font-weight:800;padding:5px 4px;text-align:center">Upload</div>
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:7px">
+            <div style="display:flex;align-items:center;gap:7px">
+              <div style="width:12px;height:14px;background:var(--color-text)"></div>
+              <div style="height:7px;flex:1;background:var(--color-text)"></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:7px">
+              <div style="width:12px;height:14px;background:var(--color-text)"></div>
+              <div style="height:7px;flex:1;background:var(--color-text)"></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:7px">
+              <div style="width:12px;height:14px;background:var(--color-accent)"></div>
+              <div style="height:7px;flex:1;background:var(--color-neutral-300)"></div>
+            </div>
+            <div style="font-size:9px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-700);margin-top:2px">receipts &rarr; your accountant</div>
+          </div>
+        </div>
+        <div style="padding:18px 0 0;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">mobile &middot; accounting</div>
+          <div style="font-size:20px;font-weight:800;letter-spacing:-0.02em">Document capture app</div>
+          <div style="font-size:14px;line-height:1.55;color:var(--color-neutral-800)">A phone app for sending receipts and paperwork straight to accounting &mdash; photograph it once, on the spot, and it&rsquo;s filed. No end-of-month shoebox.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PROCESS -->
+  <div id="process" style="border-top:2px solid var(--color-divider);margin-top:72px;background:var(--color-surface)">
+    <div style="max-width:1240px;margin:0 auto;padding:72px 40px 80px">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:40px">
+        <div>
+          <div style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:14px">03 &mdash; How it works</div>
+          <h2 style="font-size:44px;font-weight:800;letter-spacing:-0.03em;line-height:1.05;margin:0;max-width:620px">Four steps. You always know what happens next.</h2>
+        </div>
+        <div style="font-size:13px;line-height:1.6;color:var(--color-neutral-700);max-width:250px">Nothing starts without a written scope, and nothing is billed that isn&rsquo;t in it.</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--color-divider)">
+        <sc-for list="{{ steps }}" as="p" hint-placeholder-count="4">
+          <div style="padding:28px 24px 0 0;display:flex;flex-direction:column;gap:10px">
+            <div style="font-size:44px;font-weight:800;letter-spacing:-0.03em;line-height:1;color:var(--color-accent)">{{ p.no }}</div>
+            <div style="font-size:20px;font-weight:800;letter-spacing:-0.02em">{{ p.title }}</div>
+            <div style="font-size:14px;line-height:1.55;color:var(--color-neutral-800)">{{ p.body }}</div>
+            <div style="font-size:12px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600);margin-top:6px">{{ p.meta }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about" style="max-width:1240px;margin:0 auto;padding:0 40px">
+    <div style="display:grid;grid-template-columns:1fr 1.3fr;border-bottom:2px solid var(--color-divider)">
+      <div style="padding:72px 48px 72px 0;border-right:2px solid var(--color-divider)">
+        <div style="aspect-ratio:3/4;background:var(--color-surface);padding:32px;display:flex;flex-direction:column;justify-content:center;gap:26px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">hiring an agency</div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="border:2px solid var(--color-neutral-400);color:var(--color-neutral-700);font-size:13px;font-weight:800;padding:10px 12px">You</div>
+              <div style="font-size:13px;color:var(--color-neutral-500);padding-left:12px">&darr;</div>
+              <div style="border:2px solid var(--color-neutral-400);color:var(--color-neutral-700);font-size:13px;font-weight:800;padding:10px 12px">Account manager</div>
+              <div style="font-size:13px;color:var(--color-neutral-500);padding-left:12px">&darr;</div>
+              <div style="border:2px solid var(--color-neutral-400);color:var(--color-neutral-700);font-size:13px;font-weight:800;padding:10px 12px">Project manager</div>
+              <div style="font-size:13px;color:var(--color-neutral-500);padding-left:12px">&darr;</div>
+              <div style="border:2px solid var(--color-neutral-400);color:var(--color-neutral-700);font-size:13px;font-weight:800;padding:10px 12px">Whoever writes the code</div>
+            </div>
+          </div>
+          <div style="height:2px;background:var(--color-divider)"></div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-accent-700)">hiring Lexcode</div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="background:var(--color-text);color:var(--color-bg);font-size:15px;font-weight:800;padding:14px 14px">You</div>
+              <div style="display:flex;align-items:center;gap:10px;padding-left:12px">
+                <div style="font-size:16px;font-weight:800;color:var(--color-accent)">&darr;</div>
+                <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-700)">same day, same person</div>
+              </div>
+              <div style="background:var(--color-accent);color:var(--color-bg);font-size:15px;font-weight:800;padding:14px 14px">Alex &mdash; writes the code</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:72px 0 72px 48px">
+        <div style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:14px">04 &mdash; Who you&rsquo;re hiring</div>
+        <h2 style="font-size:44px;font-weight:800;letter-spacing:-0.03em;line-height:1.05;margin:0 0 20px">Hi, I&rsquo;m Alex.</h2>
+        <p style="font-size:17px;line-height:1.6;color:var(--color-text);max-width:560px">I spent years building production software inside engineering teams &mdash; the kind with real users, real uptime expectations and real code review. Lexcode is that same standard of work, without the layers in between.</p>
+        <p style="font-size:15px;line-height:1.6;color:var(--color-neutral-800);max-width:560px">The name comes from my own &mdash; Alex &mdash; and from <em>lexis</em>: words. That&rsquo;s the actual job. You describe a problem in your language; I turn it into an interface, a database and a deploy that solves it.</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:36px;border-top:2px solid var(--color-divider)">
+          <sc-for list="{{ facts }}" as="f" hint-placeholder-count="3">
+            <div style="padding:20px 16px 0 0">
+              <div style="font-size:32px;font-weight:800;letter-spacing:-0.03em;line-height:1">{{ f.k }}</div>
+              <div style="font-size:13px;line-height:1.5;color:var(--color-neutral-700);margin-top:6px">{{ f.v }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div id="contact" style="background:var(--color-text);color:var(--color-bg)">
+    <div style="max-width:1240px;margin:0 auto;padding:80px 40px 88px;display:grid;grid-template-columns:1fr 1fr;gap:64px">
+      <div>
+        <div style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent-500);margin-bottom:18px">05 &mdash; Start something</div>
+        <h2 style="font-size:56px;font-weight:800;letter-spacing:-0.035em;line-height:1;margin:0 0 22px;color:var(--color-bg)">Describe it badly. That&rsquo;s fine.</h2>
+        <p style="font-size:17px;line-height:1.6;color:var(--color-neutral-400);max-width:460px">You don&rsquo;t need a spec, a wireframe or the right words. A paragraph about the problem is enough for me to tell you whether it&rsquo;s a two-week job or a two-month one.</p>
+        <div style="margin-top:32px;display:flex;flex-direction:column;gap:10px">
+          <div style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">or reach me directly</div>
+          <a href="mailto:{{ email }}" style="font-size:22px;font-weight:800;color:var(--color-bg);letter-spacing:-0.02em">{{ email }}</a>
+          <a href="{{ bookingUrl }}" style="font-size:15px;font-weight:800;color:var(--color-accent-500);text-decoration:none;display:inline-flex;gap:8px" style-hover="color:var(--color-accent-400)">Book a 30-min call <span>&rarr;</span></a>
+        </div>
+      </div>
+
+      <div>
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div style="border:2px solid var(--color-accent-500);padding:32px">
+            <div style="font-size:28px;font-weight:800;letter-spacing:-0.02em;margin-bottom:10px">Got it &mdash; thanks.</div>
+            <div style="font-size:15px;line-height:1.6;color:var(--color-neutral-400)">I reply to every inquiry within one business day, usually with two or three questions before anything else.</div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:18px">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+              <label style="display:flex;flex-direction:column;gap:8px">
+                <span style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-500)">your name</span>
+                <input type="text" style="background:transparent;border:0;border-bottom:2px solid var(--color-neutral-700);color:var(--color-bg);font-family:var(--font-body);font-size:16px;padding:10px 0" style-focus="border-bottom-color:var(--color-accent-500);outline:none">
+              </label>
+              <label style="display:flex;flex-direction:column;gap:8px">
+                <span style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-500)">email</span>
+                <input type="email" style="background:transparent;border:0;border-bottom:2px solid var(--color-neutral-700);color:var(--color-bg);font-family:var(--font-body);font-size:16px;padding:10px 0" style-focus="border-bottom-color:var(--color-accent-500);outline:none">
+              </label>
+            </div>
+            <label style="display:flex;flex-direction:column;gap:8px">
+              <span style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-500)">what do you want to exist?</span>
+              <textarea rows="5" placeholder="A booking system my staff can actually use&hellip;" style="background:transparent;border:2px solid var(--color-neutral-700);color:var(--color-bg);font-family:var(--font-body);font-size:16px;padding:12px;resize:vertical" style-focus="border-color:var(--color-accent-500);outline:none"></textarea>
+            </label>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="font-size:11px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-500)">roughly when</span>
+              <div style="display:flex;gap:2px;flex-wrap:wrap">
+                <sc-for list="{{ timings }}" as="t" hint-placeholder-count="3">
+                  <button type="button" onClick="{{ t.pick }}" style="font-family:var(--font-body);font-size:13px;font-weight:800;padding:10px 16px;border:2px solid var(--color-neutral-700);background:{{ t.bg }};color:{{ t.fg }};cursor:pointer" style-hover="border-color:var(--color-accent-500)">{{ t.label }}</button>
+                </sc-for>
+              </div>
+            </div>
+            <button type="button" onClick="{{ send }}" style="font-family:var(--font-body);font-size:15px;font-weight:800;background:var(--color-accent);color:var(--color-bg);border:0;padding:18px 22px;cursor:pointer;display:flex;align-items:center;justify-content:flex-start;gap:10px;width:100%" style-hover="background:var(--color-accent-500)">Send it over <span>&rarr;</span></button>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+
+  <!-- BANNER + FOOTER -->
+  <div style="background:var(--color-accent);color:var(--color-bg)">
+    <div style="max-width:1240px;margin:0 auto;padding:56px 40px">
+      <div style="font-size:64px;font-weight:800;letter-spacing:-0.04em;line-height:1">Words in. Software out.</div>
+    </div>
+  </div>
+  <div style="max-width:1240px;margin:0 auto;padding:24px 40px 48px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:22px;height:22px;border:2px solid var(--color-text);padding:3px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start"><div style="height:3px;width:100%;background:var(--color-text)"></div><div style="width:6px;height:6px;background:var(--color-accent)"></div></div>
+      <div style="font-size:13px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-700)">Lexcode &mdash; {{ year }}</div>
+    </div>
+    <div style="font-size:13px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-700)">Built by the person you&rsquo;ll be working with.</div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;bookingUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#contact&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behaviour&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;alex@lexcode.dev&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Behaviour&quot;}}">
+class Component extends DCLogic {
+  state = { sent: false, timing: null };
+
+  renderVals() {
+    const timings = ["ASAP", "1–3 months", "Just exploring"].map((label) => ({
+      label,
+      bg: this.state.timing === label ? "var(--color-accent)" : "transparent",
+      fg: "var(--color-bg)",
+      pick: () => this.setState({ timing: label }),
+    }));
+
+    return {
+      bookingUrl: this.props.bookingUrl ?? "#contact",
+      email: this.props.email ?? "alex@lexcode.dev",
+      year: new Date().getFullYear(),
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      timings,
+      send: () => this.setState({ sent: true }),
+      services: [
+        { no: "01", title: "Web apps & SaaS", body: "Dashboards, portals, subscription products — auth, billing and admin included, not bolted on later.", meta: "typical: 4–10 weeks" },
+        { no: "02", title: "MVP builds, 0→1", body: "The smallest version of your idea that real users can pay for, built to be extended rather than thrown away.", meta: "typical: 4–8 weeks" },
+        { no: "03", title: "Websites & landing pages", body: "Fast, findable, and yours to edit. For when the site is the storefront and it needs to convert.", meta: "typical: 1–3 weeks" },
+        { no: "04", title: "Mobile apps", body: "iOS and Android from one codebase, through review and into the stores, with the release chores handled.", meta: "typical: 6–12 weeks" },
+        { no: "05", title: "Automation & internal tools", body: "The spreadsheet everyone edits at once, the copy-paste job someone does every Monday — turned into software.", meta: "typical: 1–4 weeks" },
+        { no: "06", title: "AI features that hold up", body: "LLMs wired into your product where they genuinely help — with evaluation, guardrails and a bill you can predict.", meta: "typical: 2–6 weeks" },
+        { no: "07", title: "Technical consulting", body: "A second opinion on architecture, hiring or a codebase you inherited. Sometimes the answer is don't build it.", meta: "hourly or day rate" },
+        { no: "08", title: "Rescue work", body: "A half-finished project from another developer, audited honestly and either finished or replaced.", meta: "audit first, always" },
+      ],
+      steps: [
+        { no: "01", title: "A conversation", body: "Thirty minutes. You describe the problem in your own words; I ask the awkward questions early.", meta: "free · no deck" },
+        { no: "02", title: "A written scope", body: "What gets built, what doesn't, what it costs and the date it lands. One page, plain language.", meta: "within 2 days" },
+        { no: "03", title: "Build in the open", body: "A working link from week one and a short update every Friday. You see progress, not status reports.", meta: "weekly rhythm" },
+        { no: "04", title: "Launch & handover", body: "Deployed, documented and yours. Thirty days of fixes included, and I'm reachable after that.", meta: "30-day warranty" },
+      ],
+      facts: [
+        { k: "8+ yrs", v: "Production engineering inside product teams" },
+        { k: "1", v: "Person you talk to, from first call to launch" },
+        { k: "<24h", v: "Reply time on any question, during a build" },
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>

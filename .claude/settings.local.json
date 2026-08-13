@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(cd \"d:\\\\Projects\\\\lexcode_revamped\"; $job = Start-Job { cd \"d:\\\\Projects\\\\lexcode_revamped\"; npm run dev 2>&1 }; Start-Sleep 12; $out = Receive-Job $job; Stop-Job $job; Remove-Job $job; $out | Select-Object -First 30)",
+      "PowerShell($en = \\(Invoke-WebRequest -Uri \"http://localhost:3000/en\" -UseBasicParsing -TimeoutSec 15\\).StatusCode; $ro = \\(Invoke-WebRequest -Uri \"http://localhost:3000/ro\" -UseBasicParsing -TimeoutSec 15\\).StatusCode; \"EN: $en  RO: $ro\")"
+    ]
+  }
+}

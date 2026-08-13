@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-accent:     #EC3013;
+  --color-accent-400: #F26244;
+  --color-accent-500: #E8401D;
+  --color-accent-600: #D02A0E;
+  --color-accent-700: #B3240C;
+
+  --color-text:       #201E1D;
+  --color-bg:         #F3F2F2;
+  --color-surface:    #EAE9E9;
+  --color-divider:    #D0CFCF;
+
+  --color-neutral-200: #E5E4E4;
+  --color-neutral-300: #CECECE;
+  --color-neutral-400: #B0AFAF;
+  --color-neutral-500: #8F8E8E;
+  --color-neutral-600: #6E6D6D;
+  --color-neutral-700: #524F4F;
+  --color-neutral-800: #363333;
+
+  --font-body: "Archivo", system-ui, sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent:     var(--color-accent);
+  --color-accent-400: var(--color-accent-400);
+  --color-accent-500: var(--color-accent-500);
+  --color-accent-600: var(--color-accent-600);
+  --color-accent-700: var(--color-accent-700);
+
+  --color-ink:        var(--color-text);
+  --color-ground:     var(--color-bg);
+  --color-surface:    var(--color-surface);
+  --color-divider:    var(--color-divider);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    margin: 0;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  a {
+    color: var(--color-accent);
+    text-underline-offset: 3px;
+  }
+
+  a:hover {
+    color: var(--color-accent-700);
+  }
 }

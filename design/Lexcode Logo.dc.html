@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/modernist-169e1921-0b2b-4bdf-94c3-dd505aed93ba/styles.css">
+<script src="_ds/modernist-169e1921-0b2b-4bdf-94c3-dd505aed93ba/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; }
+  a { color: var(--color-accent); }
+  a:hover { color: var(--color-accent-700); }
+</style>
+</helmet>
+
+<section style="background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);padding:48px">
+  <div style="max-width:1180px;margin:0 auto">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px;padding-bottom:20px;border-bottom:2px solid var(--color-text)">
+      <div>
+        <div style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent-700)">Turn 3 &mdash; lighter</div>
+        <h1 style="font-size:40px;font-weight:800;letter-spacing:-0.03em;line-height:1.05;margin:10px 0 0">Same idea, two marks inside the square</h1>
+      </div>
+      <div style="font-size:13px;line-height:1.6;color:var(--color-neutral-700);max-width:300px">One line of words, one block of code, and air around them. Reply with an id: <a href="#3a">3a</a>, <a href="#3b">3b</a>, <a href="#3c">3c</a>.</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:2px;background:var(--color-divider)">
+
+      <!-- 3a -->
+      <div id="3a" style="background:var(--color-bg);padding:32px">
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:24px;min-height:48px">
+          <div style="background:var(--color-accent);color:var(--color-bg);font-size:12px;font-weight:800;padding:4px 8px">3a</div>
+          <div style="font-size:15px;font-weight:800">Outlined &mdash; line, then block</div>
+        </div>
+        <div style="background:var(--color-surface);padding:36px;display:flex;justify-content:flex-start">
+          <div style="width:96px;height:96px;border:2px solid var(--color-text);padding:18px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start">
+            <div style="height:8px;width:100%;background:var(--color-text)"></div>
+            <div style="width:22px;height:22px;background:var(--color-accent)"></div>
+          </div>
+        </div>
+        <div style="margin-top:22px;display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;align-items:center;gap:11px">
+            <div style="width:34px;height:34px;border:2px solid var(--color-text);padding:6px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start">
+              <div style="height:3px;width:100%;background:var(--color-text)"></div>
+              <div style="width:9px;height:9px;background:var(--color-accent)"></div>
+            </div>
+            <div style="font-size:24px;font-weight:800;letter-spacing:-0.03em">Lexcode</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:20px;height:20px;border:2px solid var(--color-text);padding:3px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start">
+              <div style="height:3px;width:100%;background:var(--color-text)"></div>
+              <div style="width:6px;height:6px;background:var(--color-accent)"></div>
+            </div>
+            <div style="font-size:10px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">favicon</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3b -->
+      <div id="3b" style="background:var(--color-bg);padding:32px">
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:24px;min-height:48px">
+          <div style="background:var(--color-accent);color:var(--color-bg);font-size:12px;font-weight:800;padding:4px 8px">3b</div>
+          <div style="font-size:15px;font-weight:800">Solid &mdash; word above, block below</div>
+        </div>
+        <div style="background:var(--color-surface);padding:36px;display:flex;justify-content:flex-start">
+          <div style="width:96px;height:96px;background:var(--color-text);padding:20px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start">
+            <div style="height:8px;width:100%;background:var(--color-bg)"></div>
+            <div style="width:24px;height:24px;background:var(--color-accent)"></div>
+          </div>
+        </div>
+        <div style="margin-top:22px;display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;align-items:center;gap:11px">
+            <div style="width:34px;height:34px;background:var(--color-text);padding:7px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start">
+              <div style="height:3px;width:100%;background:var(--color-bg)"></div>
+              <div style="width:9px;height:9px;background:var(--color-accent)"></div>
+            </div>
+            <div style="font-size:24px;font-weight:800;letter-spacing:-0.03em">Lexcode</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:20px;height:20px;background:var(--color-text);padding:4px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start">
+              <div style="height:3px;width:100%;background:var(--color-bg)"></div>
+              <div style="width:6px;height:6px;background:var(--color-accent)"></div>
+            </div>
+            <div style="font-size:10px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">favicon</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3c -->
+      <div id="3c" style="background:var(--color-bg);padding:32px">
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:24px;min-height:48px">
+          <div style="background:var(--color-accent);color:var(--color-bg);font-size:12px;font-weight:800;padding:4px 8px">3c</div>
+          <div style="font-size:15px;font-weight:800">Side by side</div>
+        </div>
+        <div style="background:var(--color-surface);padding:36px;display:flex;justify-content:flex-start">
+          <div style="width:96px;height:96px;border:2px solid var(--color-text);padding:18px;display:flex;align-items:center;gap:12px">
+            <div style="flex:1;display:flex;flex-direction:column;gap:7px">
+              <div style="height:7px;background:var(--color-text)"></div>
+              <div style="height:7px;width:70%;background:var(--color-text)"></div>
+            </div>
+            <div style="width:20px;height:20px;background:var(--color-accent)"></div>
+          </div>
+        </div>
+        <div style="margin-top:22px;display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;align-items:center;gap:11px">
+            <div style="width:34px;height:34px;border:2px solid var(--color-text);padding:6px;display:flex;align-items:center;gap:4px">
+              <div style="flex:1;display:flex;flex-direction:column;gap:3px">
+                <div style="height:3px;background:var(--color-text)"></div>
+                <div style="height:3px;width:70%;background:var(--color-text)"></div>
+              </div>
+              <div style="width:8px;height:8px;background:var(--color-accent)"></div>
+            </div>
+            <div style="font-size:24px;font-weight:800;letter-spacing:-0.03em">Lexcode</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:20px;height:20px;border:2px solid var(--color-text);padding:3px;display:flex;align-items:center;gap:3px">
+              <div style="flex:1;height:3px;background:var(--color-text)"></div>
+              <div style="width:6px;height:6px;background:var(--color-accent)"></div>
+            </div>
+            <div style="font-size:10px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">favicon</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--color-divider);margin-top:2px">
+      <div style="background:var(--color-text);padding:26px;display:flex;align-items:center;gap:11px">
+        <div style="width:30px;height:30px;border:2px solid var(--color-bg);padding:5px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start">
+          <div style="height:3px;width:100%;background:var(--color-bg)"></div>
+          <div style="width:8px;height:8px;background:var(--color-accent)"></div>
+        </div>
+        <div style="font-size:20px;font-weight:800;letter-spacing:-0.03em;color:var(--color-bg)">Lexcode</div>
+      </div>
+      <div style="background:var(--color-text);padding:26px;display:flex;align-items:center;gap:11px">
+        <div style="width:30px;height:30px;background:var(--color-bg);padding:6px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start">
+          <div style="height:3px;width:100%;background:var(--color-text)"></div>
+          <div style="width:8px;height:8px;background:var(--color-accent)"></div>
+        </div>
+        <div style="font-size:20px;font-weight:800;letter-spacing:-0.03em;color:var(--color-bg)">Lexcode</div>
+      </div>
+      <div style="background:var(--color-text);padding:26px;display:flex;align-items:center;gap:11px">
+        <div style="width:30px;height:30px;border:2px solid var(--color-bg);padding:5px;display:flex;align-items:center;gap:4px">
+          <div style="flex:1;display:flex;flex-direction:column;gap:3px">
+            <div style="height:3px;background:var(--color-bg)"></div>
+            <div style="height:3px;width:70%;background:var(--color-bg)"></div>
+          </div>
+          <div style="width:7px;height:7px;background:var(--color-accent)"></div>
+        </div>
+        <div style="font-size:20px;font-weight:800;letter-spacing:-0.03em;color:var(--color-bg)">Lexcode</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section style="background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);padding:48px">
+  <div style="max-width:1180px;margin:0 auto">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px;padding-bottom:20px;border-bottom:2px solid var(--color-text)">
+      <div>
+        <div style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent-700)">Turn 2 &mdash; one square</div>
+        <h1 style="font-size:40px;font-weight:800;letter-spacing:-0.03em;line-height:1.05;margin:10px 0 0">1d, folded into a single tile</h1>
+      </div>
+      <div style="font-size:13px;line-height:1.6;color:var(--color-neutral-700);max-width:300px">Words and code inside one square instead of two. Reply with an id: <a href="#2a">2a</a>, <a href="#2b">2b</a>, <a href="#2c">2c</a>.</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:2px;background:var(--color-divider)">
+
+      <!-- 2a -->
+      <div id="2a" style="background:var(--color-bg);padding:32px">
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:24px;min-height:48px">
+          <div style="background:var(--color-accent);color:var(--color-bg);font-size:12px;font-weight:800;padding:4px 8px">2a</div>
+          <div style="font-size:15px;font-weight:800">Stacked</div>
+        </div>
+        <div style="background:var(--color-surface);padding:36px;display:flex;justify-content:flex-start">
+          <div style="width:96px;height:96px;background:var(--color-text);padding:16px;display:flex;flex-direction:column;gap:9px">
+            <div style="height:8px;background:var(--color-bg)"></div>
+            <div style="height:8px;width:64%;background:var(--color-bg)"></div>
+            <div style="height:3px;background:var(--color-accent);margin:2px 0"></div>
+            <div style="flex:1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">
+              <div style="background:var(--color-bg)"></div>
+              <div style="background:var(--color-accent)"></div>
+              <div style="background:var(--color-bg)"></div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:22px;display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;align-items:center;gap:11px">
+            <div style="width:34px;height:34px;background:var(--color-text);padding:6px;display:flex;flex-direction:column;gap:3px">
+              <div style="height:3px;background:var(--color-bg)"></div>
+              <div style="height:3px;width:64%;background:var(--color-bg)"></div>
+              <div style="height:2px;background:var(--color-accent)"></div>
+              <div style="flex:1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px">
+                <div style="background:var(--color-bg)"></div>
+                <div style="background:var(--color-accent)"></div>
+                <div style="background:var(--color-bg)"></div>
+              </div>
+            </div>
+            <div style="font-size:24px;font-weight:800;letter-spacing:-0.03em">Lexcode</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:20px;height:20px;background:var(--color-accent);padding:4px;display:flex;flex-direction:column;gap:2px">
+              <div style="height:3px;background:var(--color-bg)"></div>
+              <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:2px">
+                <div style="background:var(--color-bg)"></div>
+                <div style="background:var(--color-bg)"></div>
+              </div>
+            </div>
+            <div style="font-size:10px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">favicon</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2b -->
+      <div id="2b" style="background:var(--color-bg);padding:32px">
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:24px;min-height:48px">
+          <div style="background:var(--color-accent);color:var(--color-bg);font-size:12px;font-weight:800;padding:4px 8px">2b</div>
+          <div style="font-size:15px;font-weight:800">Diagonal</div>
+        </div>
+        <div style="background:var(--color-surface);padding:36px;display:flex;justify-content:flex-start">
+          <div style="width:96px;height:96px;background:var(--color-text);position:relative;overflow:hidden">
+            <div style="position:absolute;inset:0;padding:14px;display:flex;flex-direction:column;gap:8px;clip-path:polygon(0 0,100% 0,0 100%)">
+              <div style="height:8px;background:var(--color-bg)"></div>
+              <div style="height:8px;width:70%;background:var(--color-bg)"></div>
+              <div style="height:8px;width:40%;background:var(--color-bg)"></div>
+            </div>
+            <div style="position:absolute;inset:0;background:var(--color-accent);clip-path:polygon(100% 8%,100% 100%,8% 100%);padding:14px;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr 1fr;gap:6px;place-items:stretch">
+              <div></div>
+              <div></div>
+              <div style="background:var(--color-bg)"></div>
+              <div></div>
+              <div style="background:var(--color-bg)"></div>
+              <div style="background:var(--color-bg)"></div>
+              <div style="background:var(--color-bg)"></div>
+              <div style="background:var(--color-bg)"></div>
+              <div style="background:var(--color-bg)"></div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:22px;display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;align-items:center;gap:11px">
+            <div style="width:34px;height:34px;background:var(--color-text);position:relative;overflow:hidden">
+              <div style="position:absolute;inset:0;padding:5px;display:flex;flex-direction:column;gap:3px;clip-path:polygon(0 0,100% 0,0 100%)">
+                <div style="height:3px;background:var(--color-bg)"></div>
+                <div style="height:3px;width:70%;background:var(--color-bg)"></div>
+              </div>
+              <div style="position:absolute;inset:0;background:var(--color-accent);clip-path:polygon(100% 8%,100% 100%,8% 100%);padding:5px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:3px">
+                <div></div>
+                <div style="background:var(--color-bg)"></div>
+                <div style="background:var(--color-bg)"></div>
+                <div style="background:var(--color-bg)"></div>
+              </div>
+            </div>
+            <div style="font-size:24px;font-weight:800;letter-spacing:-0.03em">Lexcode</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:20px;height:20px;background:var(--color-text);position:relative;overflow:hidden">
+              <div style="position:absolute;inset:0;padding:3px;display:flex;flex-direction:column;gap:2px;clip-path:polygon(0 0,100% 0,0 100%)">
+                <div style="height:3px;background:var(--color-bg)"></div>
+              </div>
+              <div style="position:absolute;inset:0;background:var(--color-accent);clip-path:polygon(100% 10%,100% 100%,10% 100%);padding:4px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px">
+                <div></div>
+                <div style="background:var(--color-bg)"></div>
+                <div style="background:var(--color-bg)"></div>
+                <div style="background:var(--color-bg)"></div>
+              </div>
+            </div>
+            <div style="font-size:10px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">favicon</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2c -->
+      <div id="2c" style="background:var(--color-bg);padding:32px">
+        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:24px;min-height:48px">
+          <div style="background:var(--color-accent);color:var(--color-bg);font-size:12px;font-weight:800;padding:4px 8px">2c</div>
+          <div style="font-size:15px;font-weight:800">Breaking apart</div>
+        </div>
+        <div style="background:var(--color-surface);padding:36px;display:flex;justify-content:flex-start">
+          <div style="width:96px;height:96px;background:var(--color-text);padding:16px;display:flex;flex-direction:column;gap:8px">
+            <div style="flex:1;background:var(--color-bg)"></div>
+            <div style="flex:1;display:flex;gap:8px">
+              <div style="flex:2;background:var(--color-bg)"></div>
+              <div style="flex:1;background:var(--color-accent)"></div>
+            </div>
+            <div style="flex:1;display:flex;gap:8px">
+              <div style="flex:1;background:var(--color-bg)"></div>
+              <div style="flex:1;background:var(--color-accent)"></div>
+              <div style="flex:1;background:var(--color-bg)"></div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:22px;display:flex;flex-direction:column;gap:18px">
+          <div style="display:flex;align-items:center;gap:11px">
+            <div style="width:34px;height:34px;background:var(--color-text);padding:6px;display:flex;flex-direction:column;gap:3px">
+              <div style="flex:1;background:var(--color-bg)"></div>
+              <div style="flex:1;display:flex;gap:3px">
+                <div style="flex:2;background:var(--color-bg)"></div>
+                <div style="flex:1;background:var(--color-accent)"></div>
+              </div>
+              <div style="flex:1;display:flex;gap:3px">
+                <div style="flex:1;background:var(--color-bg)"></div>
+                <div style="flex:1;background:var(--color-accent)"></div>
+                <div style="flex:1;background:var(--color-bg)"></div>
+              </div>
+            </div>
+            <div style="font-size:24px;font-weight:800;letter-spacing:-0.03em">Lexcode</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:20px;height:20px;background:var(--color-accent);padding:4px;display:flex;flex-direction:column;gap:2px">
+              <div style="flex:1;background:var(--color-bg)"></div>
+              <div style="flex:1;display:flex;gap:2px">
+                <div style="flex:1;background:var(--color-bg)"></div>
+                <div style="flex:1;background:var(--color-bg)"></div>
+              </div>
+            </div>
+            <div style="font-size:10px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">favicon</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--color-divider);margin-top:2px">
+      <div style="background:var(--color-text);padding:26px;display:flex;align-items:center;gap:11px">
+        <div style="width:30px;height:30px;background:var(--color-bg);padding:5px;display:flex;flex-direction:column;gap:3px">
+          <div style="height:3px;background:var(--color-text)"></div>
+          <div style="height:3px;width:64%;background:var(--color-text)"></div>
+          <div style="height:2px;background:var(--color-accent)"></div>
+          <div style="flex:1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px">
+            <div style="background:var(--color-text)"></div>
+            <div style="background:var(--color-accent)"></div>
+            <div style="background:var(--color-text)"></div>
+          </div>
+        </div>
+        <div style="font-size:20px;font-weight:800;letter-spacing:-0.03em;color:var(--color-bg)">Lexcode</div>
+      </div>
+      <div style="background:var(--color-text);padding:26px;display:flex;align-items:center;gap:11px">
+        <div style="width:30px;height:30px;background:var(--color-bg);position:relative;overflow:hidden">
+          <div style="position:absolute;inset:0;padding:5px;display:flex;flex-direction:column;gap:3px;clip-path:polygon(0 0,100% 0,0 100%)">
+            <div style="height:3px;background:var(--color-text)"></div>
+            <div style="height:3px;width:70%;background:var(--color-text)"></div>
+          </div>
+          <div style="position:absolute;inset:0;background:var(--color-accent);clip-path:polygon(100% 8%,100% 100%,8% 100%);padding:5px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:3px">
+            <div></div>
+            <div style="background:var(--color-bg)"></div>
+            <div style="background:var(--color-bg)"></div>
+            <div style="background:var(--color-bg)"></div>
+          </div>
+        </div>
+        <div style="font-size:20px;font-weight:800;letter-spacing:-0.03em;color:var(--color-bg)">Lexcode</div>
+      </div>
+      <div style="background:var(--color-text);padding:26px;display:flex;align-items:center;gap:11px">
+        <div style="width:30px;height:30px;background:var(--color-bg);padding:5px;display:flex;flex-direction:column;gap:3px">
+          <div style="flex:1;background:var(--color-text)"></div>
+          <div style="flex:1;display:flex;gap:3px">
+            <div style="flex:2;background:var(--color-text)"></div>
+            <div style="flex:1;background:var(--color-accent)"></div>
+          </div>
+          <div style="flex:1;display:flex;gap:3px">
+            <div style="flex:1;background:var(--color-text)"></div>
+            <div style="flex:1;background:var(--color-accent)"></div>
+            <div style="flex:1;background:var(--color-text)"></div>
+          </div>
+        </div>
+        <div style="font-size:20px;font-weight:800;letter-spacing:-0.03em;color:var(--color-bg)">Lexcode</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section style="background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);padding:48px">
+  <div style="max-width:1180px;margin:0 auto">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px;padding-bottom:20px;border-bottom:2px solid var(--color-text)">
+      <div>
+        <div style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent-700)">Turn 1 &mdash; logo directions</div>
+        <h1 style="font-size:40px;font-weight:800;letter-spacing:-0.03em;line-height:1.05;margin:10px 0 0">Four ways to say &ldquo;words become code&rdquo;</h1>
+      </div>
+      <div style="font-size:13px;line-height:1.6;color:var(--color-neutral-700);max-width:300px">Each is typographic &mdash; no drawn illustration &mdash; so it stays sharp at 16px and prints in one colour. Reply with an id: <a href="#1a">1a</a>, <a href="#1b">1b</a>, <a href="#1c">1c</a>, <a href="#1d">1d</a>.</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:2px;background:var(--color-divider)">
+
+      <!-- 1a -->
+      <div id="1a" style="background:var(--color-bg);padding:36px">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:28px;min-height:44px">
+          <div style="background:var(--color-accent);color:var(--color-bg);font-size:12px;font-weight:800;padding:4px 8px">1a</div>
+          <div style="font-size:15px;font-weight:800">Quote to brace</div>
+          <div style="font-size:12px;color:var(--color-neutral-700)">a spoken sentence, closed as code</div>
+        </div>
+        <div style="background:var(--color-surface);padding:44px 36px;display:flex;align-items:center;justify-content:flex-start;gap:16px">
+          <div style="font-size:84px;font-weight:800;line-height:1;color:var(--color-text)">&ldquo;</div>
+          <div style="font-size:44px;font-weight:800;line-height:1;color:var(--color-accent);padding-bottom:6px">&rarr;</div>
+          <div style="font-size:66px;font-weight:800;line-height:1;color:var(--color-text)">}</div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:24px;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="display:flex;align-items:center;gap:5px;font-weight:800;line-height:1">
+              <span style="font-size:30px">&ldquo;</span><span style="font-size:16px;color:var(--color-accent)">&rarr;</span><span style="font-size:24px">}</span>
+            </div>
+            <div style="font-size:26px;font-weight:800;letter-spacing:-0.03em">Lexcode</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:34px;height:34px;background:var(--color-text);display:flex;align-items:center;justify-content:center;gap:4px;font-weight:800;line-height:1;color:var(--color-bg)">
+              <span style="font-size:15px">&ldquo;</span><span style="font-size:13px;color:var(--color-accent-400)">}</span>
+            </div>
+            <div style="width:20px;height:20px;background:var(--color-accent);display:flex;align-items:center;justify-content:center;font-weight:800;line-height:1;color:var(--color-bg)">
+              <span style="font-size:14px">}</span>
+            </div>
+            <div style="font-size:10px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">favicon</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1b -->
+      <div id="1b" style="background:var(--color-bg);padding:36px">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:28px;min-height:44px">
+          <div style="background:var(--color-accent);color:var(--color-bg);font-size:12px;font-weight:800;padding:4px 8px">1b</div>
+          <div style="font-size:15px;font-weight:800">Bracketed arrow</div>
+          <div style="font-size:12px;color:var(--color-neutral-700)">translation, held inside code syntax</div>
+        </div>
+        <div style="background:var(--color-surface);padding:44px 36px;display:flex;align-items:center;justify-content:flex-start">
+          <div style="display:flex;align-items:center;gap:6px;font-weight:800;line-height:1">
+            <span style="font-size:80px">[</span>
+            <span style="font-size:52px;color:var(--color-accent)">&rarr;</span>
+            <span style="font-size:80px">]</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:24px;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="display:flex;align-items:center;gap:3px;font-weight:800;line-height:1">
+              <span style="font-size:30px">[</span><span style="font-size:19px;color:var(--color-accent)">&rarr;</span><span style="font-size:30px">]</span>
+            </div>
+            <div style="font-size:26px;font-weight:800;letter-spacing:-0.03em">Lexcode</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:34px;height:34px;background:var(--color-text);display:flex;align-items:center;justify-content:center;gap:1px;font-weight:800;line-height:1;color:var(--color-bg)">
+              <span style="font-size:15px">[</span><span style="font-size:10px;color:var(--color-accent-400)">&rarr;</span><span style="font-size:15px">]</span>
+            </div>
+            <div style="width:20px;height:20px;background:var(--color-accent);display:flex;align-items:center;justify-content:center;font-weight:800;line-height:1;color:var(--color-bg);font-size:11px">&rarr;</div>
+            <div style="font-size:10px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">favicon</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1c -->
+      <div id="1c" style="background:var(--color-bg);padding:36px">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:28px;min-height:44px">
+          <div style="background:var(--color-accent);color:var(--color-bg);font-size:12px;font-weight:800;padding:4px 8px">1c</div>
+          <div style="font-size:15px;font-weight:800">Split wordmark</div>
+          <div style="font-size:12px;color:var(--color-neutral-700)">the name itself does the work</div>
+        </div>
+        <div style="background:var(--color-surface);padding:52px 36px;display:flex;align-items:center;justify-content:flex-start">
+          <div style="font-size:58px;font-weight:800;letter-spacing:-0.04em;line-height:1;display:flex;align-items:center;gap:4px">
+            <span>lex</span><span style="color:var(--color-accent);font-size:40px">&rarr;</span><span>code</span>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:24px;flex-wrap:wrap">
+          <div style="font-size:26px;font-weight:800;letter-spacing:-0.03em;display:flex;align-items:center;gap:3px">
+            <span>lex</span><span style="color:var(--color-accent);font-size:19px">&rarr;</span><span>code</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:34px;height:34px;background:var(--color-text);color:var(--color-bg);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;letter-spacing:-0.04em">lx</div>
+            <div style="width:20px;height:20px;background:var(--color-accent);color:var(--color-bg);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;letter-spacing:-0.04em">lx</div>
+            <div style="font-size:10px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">favicon</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1d -->
+      <div id="1d" style="background:var(--color-bg);padding:36px">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:28px;min-height:44px">
+          <div style="background:var(--color-accent);color:var(--color-bg);font-size:12px;font-weight:800;padding:4px 8px">1d</div>
+          <div style="font-size:15px;font-weight:800">Two blocks, one arrow</div>
+          <div style="font-size:12px;color:var(--color-neutral-700)">a sentence becomes a program</div>
+        </div>
+        <div style="background:var(--color-surface);padding:44px 36px;display:flex;align-items:center;justify-content:flex-start;gap:14px">
+          <div style="width:74px;height:74px;background:var(--color-text);padding:14px;display:flex;flex-direction:column;justify-content:center;gap:7px">
+            <div style="height:7px;background:var(--color-bg)"></div>
+            <div style="height:7px;width:70%;background:var(--color-bg)"></div>
+            <div style="height:7px;width:88%;background:var(--color-bg)"></div>
+          </div>
+          <div style="font-size:38px;font-weight:800;line-height:1;color:var(--color-accent)">&rarr;</div>
+          <div style="width:74px;height:74px;background:var(--color-accent);padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:6px">
+            <div style="background:var(--color-bg)"></div>
+            <div style="background:var(--color-bg)"></div>
+            <div style="background:var(--color-bg)"></div>
+            <div style="background:var(--color-bg)"></div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:24px;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="display:flex;align-items:center;gap:5px">
+              <div style="width:26px;height:26px;background:var(--color-text);padding:5px;display:flex;flex-direction:column;justify-content:center;gap:3px">
+                <div style="height:3px;background:var(--color-bg)"></div>
+                <div style="height:3px;width:70%;background:var(--color-bg)"></div>
+              </div>
+              <div style="font-size:15px;font-weight:800;color:var(--color-accent);line-height:1">&rarr;</div>
+              <div style="width:26px;height:26px;background:var(--color-accent);padding:5px;display:grid;grid-template-columns:1fr 1fr;gap:3px">
+                <div style="background:var(--color-bg)"></div>
+                <div style="background:var(--color-bg)"></div>
+                <div style="background:var(--color-bg)"></div>
+                <div style="background:var(--color-bg)"></div>
+              </div>
+            </div>
+            <div style="font-size:26px;font-weight:800;letter-spacing:-0.03em">Lexcode</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:34px;height:34px;background:var(--color-accent);padding:7px;display:grid;grid-template-columns:1fr 1fr;gap:4px">
+              <div style="background:var(--color-bg)"></div>
+              <div style="background:var(--color-bg)"></div>
+              <div style="background:var(--color-bg)"></div>
+              <div style="background:var(--color-bg)"></div>
+            </div>
+            <div style="width:20px;height:20px;background:var(--color-accent);padding:4px;display:grid;grid-template-columns:1fr 1fr;gap:3px">
+              <div style="background:var(--color-bg)"></div>
+              <div style="background:var(--color-bg)"></div>
+              <div style="background:var(--color-bg)"></div>
+              <div style="background:var(--color-bg)"></div>
+            </div>
+            <div style="font-size:10px;font-family:ui-monospace,Menlo,monospace;color:var(--color-neutral-600)">favicon</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--color-divider);margin-top:2px">
+      <div style="background:var(--color-text);padding:28px;display:flex;align-items:center;gap:12px">
+        <div style="display:flex;align-items:center;gap:4px;font-weight:800;line-height:1;color:var(--color-bg)">
+          <span style="font-size:26px">&ldquo;</span><span style="font-size:15px;color:var(--color-accent-400)">&rarr;</span><span style="font-size:21px">}</span>
+        </div>
+        <div style="font-size:20px;font-weight:800;letter-spacing:-0.03em;color:var(--color-bg)">Lexcode</div>
+      </div>
+      <div style="background:var(--color-text);padding:28px;display:flex;align-items:center;gap:12px">
+        <div style="display:flex;align-items:center;gap:2px;font-weight:800;line-height:1;color:var(--color-bg)">
+          <span style="font-size:26px">[</span><span style="font-size:17px;color:var(--color-accent-400)">&rarr;</span><span style="font-size:26px">]</span>
+        </div>
+        <div style="font-size:20px;font-weight:800;letter-spacing:-0.03em;color:var(--color-bg)">Lexcode</div>
+      </div>
+      <div style="background:var(--color-text);padding:28px;display:flex;align-items:center">
+        <div style="font-size:22px;font-weight:800;letter-spacing:-0.03em;color:var(--color-bg);display:flex;align-items:center;gap:3px">
+          <span>lex</span><span style="color:var(--color-accent-400);font-size:16px">&rarr;</span><span>code</span>
+        </div>
+      </div>
+      <div style="background:var(--color-text);padding:28px;display:flex;align-items:center;gap:10px">
+        <div style="display:flex;align-items:center;gap:4px">
+          <div style="width:22px;height:22px;background:var(--color-bg);padding:4px;display:flex;flex-direction:column;justify-content:center;gap:3px">
+            <div style="height:3px;background:var(--color-text)"></div>
+            <div style="height:3px;width:70%;background:var(--color-text)"></div>
+          </div>
+          <div style="font-size:13px;font-weight:800;color:var(--color-accent-400);line-height:1">&rarr;</div>
+          <div style="width:22px;height:22px;background:var(--color-accent);padding:4px;display:grid;grid-template-columns:1fr 1fr;gap:3px">
+            <div style="background:var(--color-bg)"></div>
+            <div style="background:var(--color-bg)"></div>
+            <div style="background:var(--color-bg)"></div>
+            <div style="background:var(--color-bg)"></div>
+          </div>
+        </div>
+        <div style="font-size:20px;font-weight:800;letter-spacing:-0.03em;color:var(--color-bg)">Lexcode</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</x-dc>
+</body>
+</html>
