@@ -18,14 +18,21 @@ export const metadata: Metadata = {
   ),
   title: "Lexcode — Software studio of one",
   description:
-    "Tell me what you need. I'll build the thing that does it. Web apps, mobile apps, internal tools and AI features — by Alex.",
+    "Tell me what you need. I'll build the thing that does it. Web apps, mobile apps, internal tools and AI features",
   openGraph: {
-    title: "Lexcode — Software studio of one",
+    title: "Lexcode - Software studio of one",
     description: "Words in. Software out.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
 };
 
@@ -40,13 +47,13 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={archivo.variable}>
       <head>
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body>
-          {children}
-          <Analytics />
-          <SpeedInsights />
-        </body>
+        {children}
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

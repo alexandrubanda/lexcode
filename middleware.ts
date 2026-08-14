@@ -61,6 +61,6 @@ export function middleware(req: NextRequest) {
 export const config = {
   matcher: [
     // Skip Next.js internals, static assets, image routes and API routes
-    "/((?!api|_next/static|_next/image|opengraph-image|twitter-image|.*\\.(?:ico|svg|png|jpg|jpeg|gif|webp|txt|xml)).*)",
+    "/((?!api|_next/static|_next/image|opengraph-image|twitter-image|icon|apple-icon|manifest|.*\\.(?:ico|svg|png|jpg|jpeg|gif|webp|txt|xml|webmanifest)).*)",
   ],
 };
