@@ -31,7 +31,7 @@ export const en: Translations = {
       { no: "03", title: "Websites & landing pages", body: "Fast, findable, and yours to edit. For when the site is the storefront and it needs to convert.", meta: "typical: 1–3 weeks" },
       { no: "04", title: "Mobile apps", body: "iOS and Android from one codebase, through review and into the stores", meta: "typical: 6–12 weeks" },
       { no: "05", title: "Automation & internal tools", body: "The spreadsheet everyone edits at once, the copy-paste job someone does every Monday turned into software.", meta: "typical: 1–4 weeks" },
-      { no: "06", title: "AI features that hold up", body: "LLMs wired into your product with evaluation, guardrails and a bill you can predict.", meta: "typical: 2–6 weeks" },
+      { no: "06", title: "AI features", body: "LLMs wired into your product with evaluation, guardrails and a bill you can predict.", meta: "typical: 2–6 weeks" },
       { no: "07", title: "Technical consulting", body: "A second opinion on architecture, hiring or a codebase you inherited. Sometimes the answer is don’t build it.", meta: "hourly or day rate" },
       { no: "08", title: "Rescue work", body: "A half-finished project from another developer, audited honestly and either finished or replaced.", meta: "audit first, always" },
     ],

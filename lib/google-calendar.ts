@@ -1,13 +1,15 @@
+import cfg from "./booking-config";
+
 const API_BASE = "https://www.googleapis.com/calendar/v3";
 
-const SLOT_MIN = 30;
-const BUFFER_MIN = 15;
-const STEP_MIN = SLOT_MIN + BUFFER_MIN; // 45 — gap between slot starts
-const DAY_START_H = 10;
-const DAY_END_H = 18;
-const TIMEZONE = "Europe/Bucharest";
-const MAX_DAYS = 30;
-const NOTICE_HOURS = 24;
+const SLOT_MIN = cfg.slotDurationMin;
+const BUFFER_MIN = cfg.bufferMin;
+const STEP_MIN = SLOT_MIN + BUFFER_MIN;
+const DAY_START_H = cfg.dayStartHour;
+const DAY_END_H = cfg.dayEndHour;
+const TIMEZONE = cfg.timezone;
+const MAX_DAYS = cfg.maxDays;
+const NOTICE_HOURS = cfg.noticeHours;
 
 async function getAccessToken(): Promise<string> {
   const res = await fetch("https://oauth2.googleapis.com/token", {
