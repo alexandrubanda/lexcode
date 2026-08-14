@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { sql } from "@/lib/db";
 import { verifyTurnstile } from "@/lib/turnstile";
+import { enquiryEmailHtml } from "@/lib/emails";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -26,15 +27,9 @@ export async function POST(req: NextRequest) {
       from: "Lexcode <noreply@lexcode.ro>",
       to: process.env.CONTACT_EMAIL!,
       replyTo: email,
-      subject: `New enquiry from ${name}`,
-      text: [
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Timing: ${timing ?? "not specified"}`,
-        ``,
-        `Message:`,
-        message,
-      ].join("\n"),
+      subject: `Enquiry — ${name}${timing ? ` · ${timing}` : ""}`,
+      html: enquiryEmailHtml({ name, email, timing: timing ?? null, message }),
+      text: `${name} (${email}) sent an enquiry.\n\nTiming: ${timing ?? "not specified"}\n\nMessage:\n${message}`,
     });
 
     return NextResponse.json({ ok: true });

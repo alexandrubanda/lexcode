@@ -332,6 +332,7 @@ export default function BookingModal({
                   href={meetLink}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={onClose}
                   className="flex items-center justify-center bg-[var(--color-accent)] text-[var(--color-bg)] no-underline text-[15px] font-extrabold py-[18px] px-[22px] hover:bg-[var(--color-accent-600)] transition-colors mb-3"
                 >
                   {t.joinMeet}

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="_ds/modernist-169e1921-0b2b-4bdf-94c3-dd505aed93ba/styles.css">
+<script src="_ds/modernist-169e1921-0b2b-4bdf-94c3-dd505aed93ba/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; }
+  a { color: var(--color-accent); }
+  a:hover { color: var(--color-accent-700); }
+</style>
+</helmet>
+
+<section style="background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);padding:48px 48px 96px">
+<div style="max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:2px">
+
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px;padding-bottom:20px;border-bottom:2px solid var(--color-text)">
+    <div>
+      <div style="font-size:12px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-accent-700)">Lexcode &mdash; templates</div>
+      <h1 style="font-size:44px;font-weight:800;letter-spacing:-0.03em;line-height:1.02;margin:10px 0 0">Signature, emails, letterhead</h1>
+    </div>
+    <div style="font-size:13px;line-height:1.6;color:var(--color-neutral-700);max-width:340px;text-wrap:pretty">Every block below is real HTML. Hit <strong>Copy HTML</strong> and paste it into Gmail&rsquo;s signature box or your send function. Email clients can&rsquo;t read CSS variables, so these use the brand hex values directly: ink #201e1d, red #ec3013, ground #f3f2f2.</div>
+  </div>
+
+  <!-- ============ 1. SIGNATURE ============ -->
+  <div style="background:var(--color-surface);padding:36px;display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <div style="background:var(--color-accent);color:var(--color-bg);font-size:12px;font-weight:800;padding:4px 8px">01</div>
+      <h2 style="font-size:24px;font-weight:800;letter-spacing:-0.02em;margin:0">Email signature</h2>
+      <div style="font-size:13px;color:var(--color-neutral-700)">Gmail &rarr; Settings &rarr; Signature. Paste; don&rsquo;t retype.</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--color-divider)">
+
+      <div style="background:#ffffff;padding:32px">
+        <div style="font-size:11px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:20px">Full &mdash; new threads</div>
+        <div ref="{{ sigFull }}">
+          <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Archivo,Helvetica,Arial,sans-serif;color:#201e1d">
+            <tr>
+              <td style="padding:0 16px 0 0;vertical-align:top">
+                <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;width:44px;height:44px;border:2px solid #201e1d">
+                  <tr><td style="padding:8px 8px 0 8px"><div style="height:5px;background:#201e1d;font-size:0;line-height:0">&nbsp;</div></td></tr>
+                  <tr><td style="padding:9px 8px 8px 8px"><div style="width:12px;height:12px;background:#ec3013;font-size:0;line-height:0">&nbsp;</div></td></tr>
+                </table>
+              </td>
+              <td style="padding:0;vertical-align:top;border-left:2px solid #201e1d">
+                <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse">
+                  <tr><td style="padding:0 0 2px 16px;font-size:16px;font-weight:700;letter-spacing:-0.02em;line-height:1.2">Alex [Last name]</td></tr>
+                  <tr><td style="padding:0 0 8px 16px;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#ec3013;line-height:1.2">Lexcode &mdash; custom software</td></tr>
+                  <tr><td style="padding:0 0 2px 16px;font-size:13px;line-height:1.5"><a href="mailto:alex@lexcode.ro" style="color:#201e1d;text-decoration:none">alex@lexcode.ro</a></td></tr>
+                  <tr><td style="padding:0 0 0 16px;font-size:13px;line-height:1.5"><a href="https://lexcode.ro" style="color:#201e1d;text-decoration:none">lexcode.ro</a></td></tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div style="margin-top:24px;display:flex;gap:10px">
+          <button type="button" onClick="{{ copyFull }}" class="btn btn-primary" style="cursor:pointer">{{ labelFull }}</button>
+        </div>
+      </div>
+
+      <div style="background:#ffffff;padding:32px">
+        <div style="font-size:11px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-neutral-600);margin-bottom:20px">Short &mdash; replies</div>
+        <div ref="{{ sigShort }}">
+          <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-family:Archivo,Helvetica,Arial,sans-serif;color:#201e1d">
+            <tr>
+              <td style="padding:0 10px 0 0;vertical-align:middle">
+                <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;width:22px;height:22px;border:2px solid #201e1d">
+                  <tr><td style="padding:4px 4px 0 4px"><div style="height:3px;background:#201e1d;font-size:0;line-height:0">&nbsp;</div></td></tr>
+                  <tr><td style="padding:4px"><div style="width:6px;height:6px;background:#ec3013;font-size:0;line-height:0">&nbsp;</div></td></tr>
+                </table>
+              </td>
+              <td style="padding:0;vertical-align:middle;font-size:13px;line-height:1.4">
+                <strong style="font-weight:700">Alex</strong> &middot; Lexcode &middot; <a href="https://lexcode.ro" style="color:#ec3013;text-decoration:none">lexcode.ro</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div style="margin-top:24px;display:flex;gap:10px">
+          <button type="button" onClick="{{ copyShort }}" class="btn btn-secondary" style="cursor:pointer">{{ labelShort }}</button>
+        </div>
+        <div style="margin-top:28px;padding-top:20px;border-top:2px solid var(--color-divider);font-size:12px;line-height:1.6;color:var(--color-neutral-700)">Rules: no photo, no social icons, no legal boilerplate. One mark, one name, one link. Replace &ldquo;Alex [Last name]&rdquo; with your legal name if you invoice under it.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============ 2. ENQUIRY NOTIFICATION ============ -->
+  <div style="background:var(--color-surface);padding:36px;display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <div style="background:var(--color-accent);color:var(--color-bg);font-size:12px;font-weight:800;padding:4px 8px">02</div>
+      <h2 style="font-size:24px;font-weight:800;letter-spacing:-0.02em;margin:0">Enquiry &mdash; to you</h2>
+      <div style="font-size:13px;color:var(--color-neutral-700)">Subject: <span style="font-family:ui-monospace,Menlo,monospace">Enquiry &mdash; {name} &middot; {timing}</span></div>
+    </div>
+
+    <div style="background:#e6e5e4;padding:32px;display:flex;justify-content:center">
+      <div ref="{{ mailEnquiry }}" style="width:600px;max-width:100%">
+        <table cellpadding="0" cellspacing="0" border="0" width="600" style="border-collapse:collapse;width:600px;max-width:100%;background:#ffffff;font-family:Archivo,Helvetica,Arial,sans-serif;color:#201e1d">
+          <tr><td style="padding:0">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse">
+              <tr>
+                <td style="padding:24px 28px;background:#201e1d">
+                  <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse">
+                    <tr>
+                      <td style="padding:0 12px 0 0;vertical-align:middle">
+                        <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;width:26px;height:26px;border:2px solid #f3f2f2">
+                          <tr><td style="padding:5px 5px 0 5px"><div style="height:3px;background:#f3f2f2;font-size:0;line-height:0">&nbsp;</div></td></tr>
+                          <tr><td style="padding:5px"><div style="width:7px;height:7px;background:#ec3013;font-size:0;line-height:0">&nbsp;</div></td></tr>
+                        </table>
+                      </td>
+                      <td width="100%" style="padding:0 24px 0 0;vertical-align:middle;font-size:19px;font-weight:700;letter-spacing:-0.03em;color:#f3f2f2">Lexcode</td>
+                      <td align="right" nowrap="nowrap" style="padding:0;vertical-align:middle;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#ec3013;white-space:nowrap">New enquiry</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr><td style="padding:32px 28px 8px 28px">
+                <div style="font-size:26px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;margin:0 0 6px">Pepe wants to talk</div>
+                <div style="font-size:13px;line-height:1.5;color:#5c5856">Sent from the contact form on lexcode.ro &middot; 14 August 2026, 18:42</div>
+              </td></tr>
+              <tr><td style="padding:24px 28px 0 28px">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;border-top:2px solid #201e1d">
+                  <tr>
+                    <td width="34%" style="padding:14px 12px 14px 0;border-bottom:1px solid #dcdad9;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5c5856;vertical-align:top">Name</td>
+                    <td style="padding:14px 0;border-bottom:1px solid #dcdad9;font-size:15px;font-weight:700;color:#201e1d">Pepe</td>
+                  </tr>
+                  <tr>
+                    <td width="34%" style="padding:14px 12px 14px 0;border-bottom:1px solid #dcdad9;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5c5856;vertical-align:top">Email</td>
+                    <td style="padding:14px 0;border-bottom:1px solid #dcdad9;font-size:15px"><a href="mailto:papucelgamer@gmail.com" style="color:#ec3013;text-decoration:none;font-weight:700">papucelgamer@gmail.com</a></td>
+                  </tr>
+                  <tr>
+                    <td width="34%" style="padding:14px 12px 14px 0;border-bottom:2px solid #201e1d;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5c5856;vertical-align:top">Timing</td>
+                    <td style="padding:14px 0;border-bottom:2px solid #201e1d;font-size:15px;font-weight:700">&Icirc;n 1&ndash;3 luni</td>
+                  </tr>
+                </table>
+              </td></tr>
+              <tr><td style="padding:28px 28px 0 28px">
+                <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5c5856;margin-bottom:10px">Message</div>
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;background:#f3f2f2">
+                  <tr><td style="padding:18px 20px;font-size:15px;line-height:1.6;color:#201e1d">Acum vine pepe?</td></tr>
+                </table>
+              </td></tr>
+              <tr><td style="padding:28px">
+                <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse">
+                  <tr><td style="background:#ec3013"><a href="mailto:papucelgamer@gmail.com?subject=Re%3A%20your%20enquiry" style="display:block;padding:14px 22px;font-size:14px;font-weight:700;color:#ffffff;text-decoration:none">Reply to Pepe &rarr;</a></td></tr>
+                </table>
+              </td></tr>
+              <tr>
+                <td style="padding:20px 28px;background:#201e1d;font-size:12px;line-height:1.5;color:#8f8a87">
+                  Lexcode &middot; <a href="https://lexcode.ro" style="color:#f3f2f2;text-decoration:none">lexcode.ro</a> &middot; automated notification, do not reply to this address
+                </td>
+              </tr>
+            </table>
+          </td></tr>
+        </table>
+      </div>
+    </div>
+    <div><button type="button" onClick="{{ copyEnquiry }}" class="btn btn-primary" style="cursor:pointer">{{ labelEnquiry }}</button></div>
+  </div>
+
+  <!-- ============ 3. BOOKING — TO YOU ============ -->
+  <div style="background:var(--color-surface);padding:36px;display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <div style="background:var(--color-accent);color:var(--color-bg);font-size:12px;font-weight:800;padding:4px 8px">03</div>
+      <h2 style="font-size:24px;font-weight:800;letter-spacing:-0.02em;margin:0">Booking &mdash; to you</h2>
+      <div style="font-size:13px;color:var(--color-neutral-700)">Subject: <span style="font-family:ui-monospace,Menlo,monospace">Booked &mdash; {name}, {day} {time}</span></div>
+    </div>
+
+    <div style="background:#e6e5e4;padding:32px;display:flex;justify-content:center">
+      <div ref="{{ mailBookMe }}" style="width:600px;max-width:100%">
+        <table cellpadding="0" cellspacing="0" border="0" width="600" style="border-collapse:collapse;width:600px;max-width:100%;background:#ffffff;font-family:Archivo,Helvetica,Arial,sans-serif;color:#201e1d">
+          <tr>
+            <td style="padding:24px 28px;background:#201e1d">
+              <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse">
+                <tr>
+                  <td style="padding:0 12px 0 0;vertical-align:middle;width:26px">
+                    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;width:26px;height:26px;border:2px solid #f3f2f2">
+                      <tr><td style="padding:5px 5px 0 5px"><div style="height:3px;background:#f3f2f2;font-size:0;line-height:0">&nbsp;</div></td></tr>
+                      <tr><td style="padding:5px"><div style="width:7px;height:7px;background:#ec3013;font-size:0;line-height:0">&nbsp;</div></td></tr>
+                    </table>
+                  </td>
+                  <td style="padding:0;vertical-align:middle;font-size:19px;font-weight:700;letter-spacing:-0.03em;color:#f3f2f2">Lexcode</td>
+                  <td align="right" style="padding:0;vertical-align:middle;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#ec3013">Call booked</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr><td style="padding:32px 28px 0 28px">
+            <div style="font-size:26px;font-weight:700;letter-spacing:-0.02em;line-height:1.15">Testing booking booked a 30&ndash;min call</div>
+            <div style="font-size:14px;line-height:1.5;margin-top:8px"><a href="mailto:papucelgamer@gmail.com" style="color:#ec3013;text-decoration:none;font-weight:700">papucelgamer@gmail.com</a></div>
+          </td></tr>
+          <tr><td style="padding:26px 28px 0 28px">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;border-top:2px solid #201e1d;border-bottom:2px solid #201e1d">
+              <tr>
+                <td width="50%" style="padding:18px 16px 18px 0;vertical-align:top">
+                  <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5c5856;margin-bottom:8px">When</div>
+                  <div style="font-size:17px;font-weight:700;line-height:1.3">Monday, 17 August 2026</div>
+                  <div style="font-size:17px;font-weight:700;line-height:1.3">10:45 &ndash; 11:15</div>
+                </td>
+                <td width="50%" style="padding:18px 0 18px 16px;vertical-align:top;border-left:1px solid #dcdad9">
+                  <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5c5856;margin-bottom:8px">Where</div>
+                  <div style="font-size:14px;line-height:1.5"><a href="https://meet.google.com/fnh-tyrz-uqt" style="color:#201e1d;text-decoration:underline">meet.google.com/fnh-tyrz-uqt</a></div>
+                </td>
+              </tr>
+            </table>
+          </td></tr>
+          <tr><td style="padding:26px 28px 0 28px">
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5c5856;margin-bottom:10px">What they wrote</div>
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;background:#f3f2f2">
+              <tr><td style="padding:18px 20px;font-size:15px;line-height:1.6">Testing booking</td></tr>
+            </table>
+          </td></tr>
+          <tr><td style="padding:28px">
+            <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse">
+              <tr>
+                <td style="background:#ec3013"><a href="https://meet.google.com/fnh-tyrz-uqt" style="display:block;padding:14px 22px;font-size:14px;font-weight:700;color:#ffffff;text-decoration:none">Join the call &rarr;</a></td>
+                <td style="width:12px">&nbsp;</td>
+                <td style="border:2px solid #201e1d"><a href="mailto:papucelgamer@gmail.com" style="display:block;padding:12px 20px;font-size:14px;font-weight:700;color:#201e1d;text-decoration:none">Email them</a></td>
+              </tr>
+            </table>
+          </td></tr>
+          <tr><td style="padding:20px 28px;background:#201e1d;font-size:12px;line-height:1.5;color:#8f8a87">
+            Lexcode &middot; <a href="https://lexcode.ro" style="color:#f3f2f2;text-decoration:none">lexcode.ro</a> &middot; automated notification
+          </td></tr>
+        </table>
+      </div>
+    </div>
+    <div><button type="button" onClick="{{ copyBookMe }}" class="btn btn-primary" style="cursor:pointer">{{ labelBookMe }}</button></div>
+  </div>
+
+  <!-- ============ 4. BOOKING — TO CUSTOMER ============ -->
+  <div style="background:var(--color-surface);padding:36px;display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <div style="background:var(--color-accent);color:var(--color-bg);font-size:12px;font-weight:800;padding:4px 8px">04</div>
+      <h2 style="font-size:24px;font-weight:800;letter-spacing:-0.02em;margin:0">Booking confirmed &mdash; to the customer</h2>
+      <div style="font-size:13px;color:var(--color-neutral-700)">Subject: <span style="font-family:ui-monospace,Menlo,monospace">Your call with Lexcode &mdash; {day} {time}</span></div>
+    </div>
+
+    <div style="background:#e6e5e4;padding:32px;display:flex;justify-content:center">
+      <div ref="{{ mailBookClient }}" style="width:600px;max-width:100%">
+        <table cellpadding="0" cellspacing="0" border="0" width="600" style="border-collapse:collapse;width:600px;max-width:100%;background:#ffffff;font-family:Archivo,Helvetica,Arial,sans-serif;color:#201e1d">
+          <tr>
+            <td style="padding:24px 28px;background:#201e1d">
+              <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse">
+                <tr>
+                  <td style="padding:0 12px 0 0;vertical-align:middle;width:26px">
+                    <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;width:26px;height:26px;border:2px solid #f3f2f2">
+                      <tr><td style="padding:5px 5px 0 5px"><div style="height:3px;background:#f3f2f2;font-size:0;line-height:0">&nbsp;</div></td></tr>
+                      <tr><td style="padding:5px"><div style="width:7px;height:7px;background:#ec3013;font-size:0;line-height:0">&nbsp;</div></td></tr>
+                    </table>
+                  </td>
+                  <td style="padding:0;vertical-align:middle;font-size:19px;font-weight:700;letter-spacing:-0.03em;color:#f3f2f2">Lexcode</td>
+                  <td align="right" style="padding:0;vertical-align:middle;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#ec3013">Confirmed</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr><td style="padding:34px 28px 0 28px">
+            <div style="font-size:14px;line-height:1.5;color:#5c5856">Hi Test,</div>
+            <div style="font-size:28px;font-weight:700;letter-spacing:-0.025em;line-height:1.12;margin-top:10px">Your 30&ndash;minute call with Alex is confirmed.</div>
+          </td></tr>
+          <tr><td style="padding:26px 28px 0 28px">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;border-top:2px solid #201e1d;border-bottom:2px solid #201e1d">
+              <tr>
+                <td style="padding:20px 16px 20px 0;vertical-align:top">
+                  <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5c5856;margin-bottom:8px">When</div>
+                  <div style="font-size:19px;font-weight:700;line-height:1.25">Wednesday, 26 August 2026</div>
+                  <div style="font-size:19px;font-weight:700;line-height:1.25">10:45 &ndash; 11:15</div>
+                  <div style="font-size:12px;color:#5c5856;margin-top:6px">[Your timezone]</div>
+                </td>
+              </tr>
+            </table>
+          </td></tr>
+          <tr><td style="padding:28px 28px 0 28px">
+            <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse">
+              <tr><td style="background:#ec3013"><a href="https://meet.google.com/ovg-wbws-bub" style="display:block;padding:16px 24px;font-size:15px;font-weight:700;color:#ffffff;text-decoration:none">Join on Google Meet &rarr;</a></td></tr>
+            </table>
+            <div style="font-size:12px;line-height:1.5;color:#5c5856;margin-top:10px">meet.google.com/ovg-wbws-bub &mdash; no install needed, it opens in the browser.</div>
+          </td></tr>
+          <tr><td style="padding:30px 28px 0 28px">
+            <div style="border-top:1px solid #dcdad9;padding-top:22px">
+              <div style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#5c5856;margin-bottom:12px">What happens on the call</div>
+              <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse">
+                <tr>
+                  <td width="24" style="padding:0 10px 10px 0;font-size:14px;font-weight:700;color:#ec3013;vertical-align:top">01</td>
+                  <td style="padding:0 0 10px 0;font-size:14px;line-height:1.55">You describe the problem in your own words. No prep needed.</td>
+                </tr>
+                <tr>
+                  <td width="24" style="padding:0 10px 10px 0;font-size:14px;font-weight:700;color:#ec3013;vertical-align:top">02</td>
+                  <td style="padding:0 0 10px 0;font-size:14px;line-height:1.55">I ask questions until the scope is clear enough to price.</td>
+                </tr>
+                <tr>
+                  <td width="24" style="padding:0 10px 0 0;font-size:14px;font-weight:700;color:#ec3013;vertical-align:top">03</td>
+                  <td style="padding:0;font-size:14px;line-height:1.55">You get a written summary with scope, timeline and cost &mdash; no obligation.</td>
+                </tr>
+              </table>
+            </div>
+          </td></tr>
+          <tr><td style="padding:26px 28px 30px 28px">
+            <div style="font-size:14px;line-height:1.6;color:#5c5856">Need to move it? Just reply to this email &mdash; it reaches me directly.</div>
+          </td></tr>
+          <tr><td style="padding:22px 28px;background:#201e1d">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse">
+              <tr>
+                <td style="padding:0;font-size:13px;font-weight:700;color:#f3f2f2;line-height:1.5">Alex &mdash; Lexcode<br><span style="font-weight:400;color:#8f8a87">Custom software, built to fit</span></td>
+                <td align="right" style="padding:0;font-size:12px;line-height:1.6;color:#8f8a87">
+                  <a href="mailto:alex@lexcode.ro" style="color:#f3f2f2;text-decoration:none">alex@lexcode.ro</a><br><a href="https://lexcode.ro" style="color:#f3f2f2;text-decoration:none">lexcode.ro</a>
+                </td>
+              </tr>
+            </table>
+          </td></tr>
+        </table>
+      </div>
+    </div>
+    <div><button type="button" onClick="{{ copyBookClient }}" class="btn btn-primary" style="cursor:pointer">{{ labelBookClient }}</button></div>
+  </div>
+
+  <!-- ============ 5. DOCUMENT HEADER / FOOTER ============ -->
+  <div style="background:var(--color-surface);padding:36px;display:flex;flex-direction:column;gap:24px">
+    <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap">
+      <div style="background:var(--color-accent);color:var(--color-bg);font-size:12px;font-weight:800;padding:4px 8px">05</div>
+      <h2 style="font-size:24px;font-weight:800;letter-spacing:-0.02em;margin:0">Document header &amp; footer</h2>
+      <div style="font-size:13px;color:var(--color-neutral-700)">Proposals, quotes, invoices, specs, contracts &mdash; same two bands every time.</div>
+    </div>
+
+    <div style="background:#e6e5e4;padding:40px;display:flex;justify-content:center">
+      <div style="width:794px;max-width:100%;background:#ffffff;padding:56px 64px;display:flex;flex-direction:column;gap:0;box-shadow:var(--shadow-md)">
+
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:40px;padding-bottom:18px;border-bottom:2px solid #201e1d">
+          <div style="display:flex;align-items:center;gap:14px">
+            <div style="width:38px;height:38px;border:2px solid #201e1d;padding:7px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start">
+              <div style="height:4px;width:100%;background:#201e1d"></div>
+              <div style="width:10px;height:10px;background:#ec3013"></div>
+            </div>
+            <div>
+              <div style="font-size:26px;font-weight:800;letter-spacing:-0.03em;line-height:1;color:#201e1d">Lexcode</div>
+              <div style="font-size:10px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#ec3013;margin-top:5px">Custom software, built to fit</div>
+            </div>
+          </div>
+          <div style="text-align:right;font-size:11px;line-height:1.7;color:#5c5856">
+            <div>alex@lexcode.ro</div>
+            <div>lexcode.ro</div>
+            <div>[City], Romania</div>
+          </div>
+        </div>
+
+        <div style="padding:34px 0 40px">
+          <div style="font-size:10px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#5c5856">Proposal &mdash; PRP-2026-014</div>
+          <h3 style="font-size:34px;font-weight:800;letter-spacing:-0.03em;line-height:1.06;margin:12px 0 0;color:#201e1d">Desk booking for a 40-person office</h3>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px;padding-top:18px;border-top:1px solid #dcdad9">
+            <div>
+              <div style="font-size:10px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#5c5856">Prepared for</div>
+              <div style="font-size:14px;font-weight:700;margin-top:6px;color:#201e1d">Client name</div>
+            </div>
+            <div>
+              <div style="font-size:10px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#5c5856">Date</div>
+              <div style="font-size:14px;font-weight:700;margin-top:6px;color:#201e1d">14 August 2026</div>
+            </div>
+            <div>
+              <div style="font-size:10px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#5c5856">Valid until</div>
+              <div style="font-size:14px;font-weight:700;margin-top:6px;color:#201e1d">14 September 2026</div>
+            </div>
+          </div>
+          <div style="margin-top:36px;font-size:13px;line-height:1.75;color:var(--color-neutral-600);font-style:italic">&mdash; document body sits here &mdash;</div>
+        </div>
+
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:32px;padding-top:16px;border-top:2px solid #201e1d;font-size:10px;line-height:1.7;color:#5c5856">
+          <div>
+            <div style="font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#201e1d">Lexcode</div>
+            <div>CUI 00000000 &middot; Reg. J40/0000/2026 &middot; [City], Romania</div>
+          </div>
+          <div style="text-align:right">
+            <div>alex@lexcode.ro &middot; lexcode.ro</div>
+            <div>Page 1 of 1</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div style="font-size:12px;line-height:1.6;color:var(--color-neutral-700);max-width:680px;text-wrap:pretty">Fill in the real city, CUI and registration number before this goes to a client. The footer repeats on every printed page; the header only on page one.</div>
+  </div>
+
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { copied: null };
+
+  refFor(key) {
+    this._refs = this._refs || {};
+    this._refs[key] = this._refs[key] || React.createRef();
+    return this._refs[key];
+  }
+
+  copy(key) {
+    return () => {
+      const node = this._refs && this._refs[key] && this._refs[key].current;
+      if (!node) return;
+      const html = node.innerHTML.trim();
+      const done = () => {
+        this.setState({ copied: key });
+        clearTimeout(this._t);
+        this._t = setTimeout(() => this.setState({ copied: null }), 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(html).then(done, done);
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = html;
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta);
+        done();
+      }
+    };
+  }
+
+  label(key, text) {
+    return this.state.copied === key ? 'Copied' : text;
+  }
+
+  renderVals() {
+    return {
+      sigFull: this.refFor('sigFull'),
+      sigShort: this.refFor('sigShort'),
+      mailEnquiry: this.refFor('mailEnquiry'),
+      mailBookMe: this.refFor('mailBookMe'),
+      mailBookClient: this.refFor('mailBookClient'),
+      copyFull: this.copy('sigFull'),
+      copyShort: this.copy('sigShort'),
+      copyEnquiry: this.copy('mailEnquiry'),
+      copyBookMe: this.copy('mailBookMe'),
+      copyBookClient: this.copy('mailBookClient'),
+      labelFull: this.label('sigFull', 'Copy HTML'),
+      labelShort: this.label('sigShort', 'Copy HTML'),
+      labelEnquiry: this.label('mailEnquiry', 'Copy HTML'),
+      labelBookMe: this.label('mailBookMe', 'Copy HTML'),
+      labelBookClient: this.label('mailBookClient', 'Copy HTML')
+    };
+  }
+}
+</script>
+</body>
+</html>

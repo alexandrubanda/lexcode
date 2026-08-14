@@ -4,8 +4,8 @@ import { sql } from "@/lib/db";
 import {
   getAvailableSlots,
   createBookingEvent,
-  formatBucharestDateTime,
 } from "@/lib/google-calendar";
+import { bookingNotificationHtml, bookingConfirmationHtml } from "@/lib/emails";
 import { verifyTurnstile } from "@/lib/turnstile";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -86,40 +86,22 @@ export async function POST(req: NextRequest) {
     }
 
     // ── Emails: non-critical ──────────────────────────────────────────────
-    const formattedTime = formatBucharestDateTime(slotStart);
     try {
       await Promise.all([
         resend.emails.send({
           from: "Lexcode <noreply@lexcode.ro>",
           to: process.env.CONTACT_EMAIL!,
-          subject: `New booking: ${name}`,
-          text: [
-            `${name} (${email}) booked a 30-min call.`,
-            ``,
-            `When: ${formattedTime}`,
-            `Meet: ${meetLink}`,
-            ``,
-            message ? `Message: ${message}` : "No message.",
-          ].join("\n"),
+          subject: `Booked — ${name}`,
+          html: bookingNotificationHtml({ name, email, message: message ?? null, slotStart, slotEnd, meetLink }),
+          text: `${name} (${email}) booked a 30-min call.\n\nMeet: ${meetLink}\n\n${message ?? "No message."}`,
         }),
         resend.emails.send({
           from: "Lexcode <noreply@lexcode.ro>",
           to: email,
           replyTo: process.env.CONTACT_EMAIL!,
-          subject: "Your call with Alex is confirmed",
-          text: [
-            `Hi ${name},`,
-            ``,
-            `Your 30-min call with Alex (Lexcode) is confirmed.`,
-            ``,
-            `When: ${formattedTime}`,
-            `Google Meet: ${meetLink}`,
-            ``,
-            `You'll also receive a Google Calendar invite at this address.`,
-            ``,
-            `See you then,`,
-            `Alex`,
-          ].join("\n"),
+          subject: `Your call with Lexcode is confirmed`,
+          html: bookingConfirmationHtml({ name, slotStart, slotEnd, meetLink }),
+          text: `Hi ${name},\n\nYour 30-min call with Alex (Lexcode) is confirmed.\n\nGoogle Meet: ${meetLink}\n\nSee you then,\nAlex`,
         }),
       ]);
     } catch (emailErr) {
