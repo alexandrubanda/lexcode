@@ -1,2 +1,2 @@
 export const BOOKING_URL = "#contact";
-export const CONTACT_EMAIL = "alexandruabanda@gmail.com";
+export const CONTACT_EMAIL = "alex@lexcode.ro";
