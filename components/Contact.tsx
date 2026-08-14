@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Turnstile } from "@marsidev/react-turnstile";
 import SectionLabel from "./ui/SectionLabel";
 import { CONTACT_EMAIL } from "@/lib/data";
@@ -21,6 +21,12 @@ export default function Contact({ t, tBooking }: { t: ContactT; tBooking: Bookin
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    const handler = () => setBookingOpen(true);
+    document.addEventListener("open-booking", handler);
+    return () => document.removeEventListener("open-booking", handler);
+  }, []);
 
   async function handleSubmit() {
     const name = nameRef.current?.value.trim() ?? "";

@@ -1,5 +1,5 @@
 import SectionLabel from "./ui/SectionLabel";
-import { BOOKING_URL } from "@/lib/data";
+import ServicesCta from "./ui/ServicesCta";
 import type { Translations } from "@/lib/i18n/types";
 
 type ServicesT = Translations["services"];
@@ -36,22 +36,7 @@ export default function Services({ t }: { t: ServicesT }) {
           </div>
         ))}
 
-        {/* CTA card */}
-        <a
-          href={BOOKING_URL}
-          className="flex flex-col gap-[10px] p-6 md:p-7 min-h-[220px] no-underline transition-colors hover:bg-[var(--color-accent-600)]"
-          style={{
-            borderRight: "2px solid var(--color-divider)",
-            borderBottom: "2px solid var(--color-divider)",
-            background: "var(--color-accent)",
-            color: "var(--color-bg)",
-          }}
-        >
-          <div className="text-[11px] font-mono">{t.cta.no}</div>
-          <div className="text-[20px] md:text-[22px] font-extrabold tracking-[-0.02em] leading-[1.1]">{t.cta.title}</div>
-          <div className="text-[14px] leading-[1.55]">{t.cta.body}</div>
-          <div className="mt-auto text-[14px] font-extrabold">{t.cta.link}</div>
-        </a>
+        <ServicesCta cta={t.cta} />
       </div>
     </section>
   );

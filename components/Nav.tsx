@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "./ui/Logo";
 import Button from "./ui/Button";
-import { BOOKING_URL } from "@/lib/data";
 import type { Translations } from "@/lib/i18n/types";
 
 type NavT = Translations["nav"];
@@ -44,6 +43,14 @@ function LocaleSwitcher({ bordered = false }: { bordered?: boolean }) {
   );
 }
 
+function scrollTo(id: string) {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+}
+
+function openBooking() {
+  document.dispatchEvent(new CustomEvent("open-booking"));
+}
+
 export default function Nav({ t }: { t: NavT }) {
   const [open, setOpen] = useState(false);
 
@@ -64,12 +71,13 @@ export default function Nav({ t }: { t: NavT }) {
             <a
               key={l.href}
               href={l.href}
-              className="text-[14px] font-extrabold text-[var(--color-text)] no-underline hover:text-[var(--color-accent)] transition-colors"
+              onClick={(e) => { e.preventDefault(); scrollTo(l.href.slice(1)); }}
+              className="text-[14px] font-extrabold text-[var(--color-text)] no-underline hover:text-[var(--color-accent)] transition-colors cursor-pointer"
             >
               {l.label}
             </a>
           ))}
-          <Button href={BOOKING_URL}>{t.bookCall}</Button>
+          <Button onClick={openBooking}>{t.bookCall}</Button>
           <LocaleSwitcher bordered />
         </div>
 
@@ -102,13 +110,13 @@ export default function Nav({ t }: { t: NavT }) {
               <a
                 key={l.href}
                 href={l.href}
-                onClick={() => setOpen(false)}
-                className="text-[15px] font-extrabold text-[var(--color-text)] no-underline py-2"
+                onClick={(e) => { e.preventDefault(); setOpen(false); scrollTo(l.href.slice(1)); }}
+                className="text-[15px] font-extrabold text-[var(--color-text)] no-underline py-2 cursor-pointer"
               >
                 {l.label}
               </a>
             ))}
-            <Button href={BOOKING_URL} size="lg" className="self-start mt-2">
+            <Button onClick={() => { setOpen(false); openBooking(); }} size="lg" className="self-start mt-2">
               {t.bookCall}
             </Button>
             <div className="pt-3 border-t-2 border-[var(--color-neutral-200)]">

@@ -1,5 +1,5 @@
-import Button from "./ui/Button";
-import { BOOKING_URL } from "@/lib/data";
+import BookingButton from "./ui/BookingButton";
+import ScrollButton from "./ui/ScrollButton";
 import type { Translations } from "@/lib/i18n/types";
 
 type HeroT = Translations["hero"];
@@ -21,8 +21,8 @@ export default function Hero({ t }: { t: HeroT }) {
             {t.body}
           </p>
           <div className="flex items-center gap-3 flex-wrap">
-            <Button href={BOOKING_URL} size="lg">{t.ctaBook}</Button>
-            <Button href="#contact" variant="outline" size="lg">{t.ctaDescribe}</Button>
+            <BookingButton size="lg">{t.ctaBook}</BookingButton>
+            <ScrollButton target="contact" variant="outline" size="lg">{t.ctaDescribe}</ScrollButton>
           </div>
         </div>
 
