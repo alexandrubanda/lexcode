@@ -95,7 +95,7 @@ export const en: Translations = {
     form: {
       nameLabel: "your name",
       emailLabel: "email",
-      messageLabel: "what do you want to exist?",
+      messageLabel: "what are we building?",
       messagePlaceholder: "A booking system my staff can actually use…",
       timingLabel: "roughly when",
       timings: ["ASAP", "1–3 months", "Just exploring"],
