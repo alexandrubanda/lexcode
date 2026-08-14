@@ -89,7 +89,8 @@ export const ro: Translations = {
     label: "05 — Hai să începem",
     heading: "Descrie ce ai nevoie, chiar și vag. E în regulă.",
     body: "Nu ai nevoie de un caiet de sarcini, de schițe sau de termeni tehnici. Un scurt paragraf despre problemă îmi e de ajuns ca să-ți spun dacă e o muncă de două săptămâni sau de două luni.",
-    directLabel: "sau scrie-mi direct",
+    directLabel: "scrie-mi direct",
+    formLabel: "sau lasă-mi un mesaj",
     bookLink: "Programează o discuție de 30 min →",
     form: {
       nameLabel: "numele tău",

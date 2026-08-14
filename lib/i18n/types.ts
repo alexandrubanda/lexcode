@@ -63,6 +63,7 @@ export type Translations = {
     heading: string;
     body: string;
     directLabel: string;
+    formLabel: string;
     bookLink: string;
     form: {
       nameLabel: string;

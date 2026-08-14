@@ -53,10 +53,10 @@ export default function Contact({ t, tBooking }: { t: ContactT; tBooking: Bookin
   return (
     <>
     <section id="contact" className="bg-[var(--color-text)] text-[var(--color-bg)]">
-      <div className="max-w-[1240px] mx-auto px-5 md:px-10 py-16 md:py-[88px] grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+      <div className="max-w-[1240px] mx-auto px-5 md:px-10 py-16 md:py-[88px] grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-16">
 
         {/* Left: intro */}
-        <div>
+        <div className="pb-10 md:pb-0">
           <SectionLabel light>{t.label}</SectionLabel>
           <h2 className="text-[40px] md:text-[56px] font-extrabold tracking-[-0.035em] leading-[1] m-0 mb-[22px] text-[var(--color-bg)]">
             {t.heading}
@@ -89,6 +89,11 @@ export default function Contact({ t, tBooking }: { t: ContactT; tBooking: Bookin
 
         {/* Right: form or success */}
         <div>
+          <div className="md:hidden flex items-center gap-4 mb-8">
+            <div className="flex-1 h-px bg-[var(--color-neutral-700)]" />
+            <span className="text-[11px] font-mono text-[var(--color-neutral-500)] whitespace-nowrap">{t.formLabel}</span>
+            <div className="flex-1 h-px bg-[var(--color-neutral-700)]" />
+          </div>
           {sent ? (
             <div className="border-2 border-[var(--color-accent-500)] p-8">
               <div className="text-[28px] font-extrabold tracking-[-0.02em] mb-[10px]">{t.success.heading}</div>

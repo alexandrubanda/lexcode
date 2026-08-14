@@ -10,7 +10,7 @@ import type { Translations } from "@/lib/i18n/types";
 
 type NavT = Translations["nav"];
 
-function LocaleSwitcher() {
+function LocaleSwitcher({ bordered = false }: { bordered?: boolean }) {
   const pathname = usePathname();
   const segments = pathname.split("/");
   const currentLocale = segments[1] || "en";
@@ -22,7 +22,7 @@ function LocaleSwitcher() {
   }
 
   return (
-    <div className="flex items-center gap-[5px] border-l-2 border-[var(--color-neutral-300)] pl-4 ml-1">
+    <div className={`flex items-center gap-[5px] ${bordered ? "border-l-2 border-[var(--color-neutral-300)] pl-4 ml-1" : ""}`}>
       {(["en", "ro"] as const).map((locale, i) => (
         <span key={locale} className="flex items-center gap-[5px]">
           {i > 0 && (
@@ -70,7 +70,7 @@ export default function Nav({ t }: { t: NavT }) {
             </a>
           ))}
           <Button href={BOOKING_URL}>{t.bookCall}</Button>
-          <LocaleSwitcher />
+          <LocaleSwitcher bordered />
         </div>
 
         {/* Mobile hamburger */}

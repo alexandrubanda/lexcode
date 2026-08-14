@@ -89,7 +89,8 @@ export const en: Translations = {
     label: "05 — Start something",
     heading: "Describe it badly. That’s fine.",
     body: "You don’t need a spec, a wireframe or the right words. A paragraph about the problem is enough for me to tell you whether it’s a two-week job or a two-month one.",
-    directLabel: "or reach me directly",
+    directLabel: "reach me directly",
+    formLabel: "or leave a message",
     bookLink: "Book a 30-min call →",
     form: {
       nameLabel: "your name",
