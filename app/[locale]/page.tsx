@@ -37,14 +37,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (locale === "ro") {
     return {
       alternates,
-      title: "Lexcode - Studio software independent",
+      title: "Lexcode - Tu descrii. Eu programez.",
       description:
-        "Spune-mi de ce ai nevoie. Eu construiesc soluția. Aplicații web, mobile, unelte interne și integrări AI",
+        "Aplicații web, aplicații mobile, automatizări și integrări AI. Peste 8 ani de experiență. Un developer dedicat care lucrează direct cu tine.",
       openGraph: {
-        title: "Lexcode - Studio software independent",
-        description: "Tu descrii. Eu programez.",
+        title: "Lexcode - Tu descrii. Eu programez.",
+        description: "Aplicații web, aplicații mobile, automatizări și integrări AI. Peste 8 ani de experiență. Un developer dedicat care lucrează direct cu tine.",
         type: "website",
-        url: `${BASE_URL}/ro`,
+        url: BASE_URL,
         images: [ogImage],
       },
     };
@@ -52,12 +52,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     alternates,
-    title: "Lexcode - Software studio of one",
+    title: "Lexcode - Describe it. I build it.",
     description:
-      "Tell me what you need. I'll build the thing that does it. Web apps, mobile apps, internal tools and AI features",
+      "Custom web apps, mobile apps,i nternal tools and AI features. 8+ years of shipping production software. One dedicated developer working directly with you.",
     openGraph: {
-      title: "Lexcode - Software studio of one",
-      description: "Words in. Software out.",
+      title: "Lexcode - Describe it. I build it.",
+      description: "Custom web apps, mobile apps, internal tools, and AI features. 8+ years of shipping production software. One dedicated developer working directly with you.",
       type: "website",
       url: `${BASE_URL}/en`,
       images: [ogImage],
