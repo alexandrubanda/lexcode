@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 const locales = ["en", "ro"] as const;
 type Locale = (typeof locales)[number];
-const defaultLocale: Locale = "en";
+const defaultLocale: Locale = "ro";
 
 function detectLocale(req: NextRequest): Locale {
   // 1. Cookie stores the user's explicit choice — always respect it
@@ -20,41 +20,56 @@ function detectLocale(req: NextRequest): Locale {
   return defaultLocale;
 }
 
-export function middleware(req: NextRequest) {
-  const { pathname } = req.nextUrl;
-
-  const hasLocale = locales.some(
-    (l) => pathname === `/${l}` || pathname.startsWith(`/${l}/`)
-  );
-
-  if (hasLocale) {
-    // Route already has a locale — set the request header so the root layout
-    // can read it to set <html lang="…"> without another round-trip.
-    const locale = pathname.split("/")[1] as Locale;
-    const reqHeaders = new Headers(req.headers);
-    reqHeaders.set("x-locale", locale);
-
-    const res = NextResponse.next({ request: { headers: reqHeaders } });
-    // Persist the user's current locale as their preference
-    res.cookies.set("NEXT_LOCALE", locale, {
-      path: "/",
-      maxAge: 365 * 24 * 60 * 60,
-      sameSite: "lax",
-    });
-    return res;
-  }
-
-  // No locale in path — detect and redirect
-  const locale = detectLocale(req);
-  const url = req.nextUrl.clone();
-  url.pathname = `/${locale}${pathname === "/" ? "" : pathname}`;
-
-  const res = NextResponse.redirect(url);
+function setCookie(res: NextResponse, locale: Locale) {
   res.cookies.set("NEXT_LOCALE", locale, {
     path: "/",
     maxAge: 365 * 24 * 60 * 60,
     sameSite: "lax",
   });
+}
+
+export function middleware(req: NextRequest) {
+  const { pathname } = req.nextUrl;
+
+  // /ro → redirect to / (ro is the default, canonical URL is /)
+  if (pathname === "/ro" || pathname.startsWith("/ro/")) {
+    const newPath = pathname === "/ro" ? "/" : pathname.slice(3);
+    const url = req.nextUrl.clone();
+    url.pathname = newPath;
+    const res = NextResponse.redirect(url);
+    setCookie(res, "ro");
+    return res;
+  }
+
+  // /en or /en/* → pass through with x-locale header
+  if (pathname === "/en" || pathname.startsWith("/en/")) {
+    const locale = pathname.split("/")[1] as Locale;
+    const reqHeaders = new Headers(req.headers);
+    reqHeaders.set("x-locale", locale);
+    const res = NextResponse.next({ request: { headers: reqHeaders } });
+    setCookie(res, locale);
+    return res;
+  }
+
+  // No locale prefix — detect and handle
+  const locale = detectLocale(req);
+
+  if (locale === "en") {
+    // Redirect to /en
+    const url = req.nextUrl.clone();
+    url.pathname = `/en${pathname === "/" ? "" : pathname}`;
+    const res = NextResponse.redirect(url);
+    setCookie(res, "en");
+    return res;
+  }
+
+  // Romanian (default) — rewrite to /ro internally, URL stays clean
+  const reqHeaders = new Headers(req.headers);
+  reqHeaders.set("x-locale", "ro");
+  const url = req.nextUrl.clone();
+  url.pathname = `/ro${pathname === "/" ? "" : pathname}`;
+  const res = NextResponse.rewrite(url, { request: { headers: reqHeaders } });
+  setCookie(res, "ro");
   return res;
 }
 

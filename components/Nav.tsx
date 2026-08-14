@@ -11,13 +11,13 @@ type NavT = Translations["nav"];
 
 function LocaleSwitcher({ bordered = false }: { bordered?: boolean }) {
   const pathname = usePathname();
-  const segments = pathname.split("/");
-  const currentLocale = segments[1] || "en";
+  const isEn = pathname === "/en" || pathname.startsWith("/en/");
+  const currentLocale = isEn ? "en" : "ro";
 
-  function localePath(locale: string) {
-    const segs = [...segments];
-    segs[1] = locale;
-    return segs.join("/") || `/${locale}`;
+  function localePath(locale: "en" | "ro"): string {
+    const rest = isEn ? pathname.slice(3) || "/" : pathname;
+    const suffix = rest === "/" ? "" : rest;
+    return locale === "ro" ? `/ro${suffix}` : `/en${suffix}`;
   }
 
   return (

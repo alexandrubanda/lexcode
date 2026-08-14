@@ -4,7 +4,7 @@ import { ro } from "./ro";
 
 export const locales = ["en", "ro"] as const;
 export type Locale = (typeof locales)[number];
-export const defaultLocale: Locale = "en";
+export const defaultLocale: Locale = "ro";
 
 const dict: Record<Locale, Translations> = { en, ro };
 

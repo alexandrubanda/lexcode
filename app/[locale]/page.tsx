@@ -20,11 +20,15 @@ interface PageProps {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { locale } = await params;
 
+  const roUrl = BASE_URL;
+  const enUrl = `${BASE_URL}/en`;
+
   const alternates = {
-    canonical: `${BASE_URL}/${locale}`,
+    canonical: locale === "ro" ? roUrl : enUrl,
     languages: {
-      ...Object.fromEntries(locales.map((l) => [l, `${BASE_URL}/${l}`])),
-      "x-default": `${BASE_URL}/en`,
+      ro: roUrl,
+      en: enUrl,
+      "x-default": roUrl,
     },
   };
 
