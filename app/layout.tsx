@@ -47,6 +47,7 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={archivo.variable}>
       <head>
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body>
