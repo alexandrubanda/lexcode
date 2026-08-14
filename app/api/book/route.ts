@@ -90,7 +90,7 @@ export async function POST(req: NextRequest) {
     try {
       await Promise.all([
         resend.emails.send({
-          from: "Lexcode <noreply@lexcode.dev>",
+          from: "Lexcode <noreply@lexcode.ro>",
           to: process.env.CONTACT_EMAIL!,
           subject: `New booking: ${name}`,
           text: [
@@ -103,7 +103,7 @@ export async function POST(req: NextRequest) {
           ].join("\n"),
         }),
         resend.emails.send({
-          from: "Lexcode <noreply@lexcode.dev>",
+          from: "Lexcode <noreply@lexcode.ro>",
           to: email,
           replyTo: process.env.CONTACT_EMAIL!,
           subject: "Your call with Alex is confirmed",

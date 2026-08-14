@@ -16,7 +16,7 @@ export const ro: Translations = {
     widget: {
       inputLabel: "ce îmi spui tu",
       outputLabel: "ce primești",
-      quote: "„Vreau ca clienții să își poată programa singuri o întâlnire online și să nu mai fiu nevoit să răspund tot timpul la telefon.”",
+      quote: "„Doresc ca programările să se facă online direct de către clienți, ca să nu mai fiu nevoit să răspund tot timpul la telefon.”",
       pickTime: "Alege o oră",
       confirmBooking: "Confirmă programarea",
     },
@@ -31,7 +31,7 @@ export const ro: Translations = {
       { no: "03", title: "Site-uri și pagini de prezentare", body: "Rapide, bine optimizate pentru Google și ușor de editat chiar de tine. Perfecte când site-ul e prima ta linie de vânzare și trebuie să convertească.", meta: "în medie: 1–3 săptămâni" },
       { no: "04", title: "Aplicații mobile", body: "iOS și Android dintr-o singură bază de cod. Mă ocup de tot procesul: de la dezvoltare până la aprobarea și lansarea în App Store și Google Play.", meta: "în medie: 6–12 săptămâni" },
       { no: "05", title: "Automatizări & unelte interne", body: "Tabelul Excel în care lucrează toată lumea deodată sau munca repetitivă de copy-paste transformate în software eficient.", meta: "în medie: 1–4 săptămâni" },
-      { no: "06", title: "Funcționalități AI utile", body: "Modele LLM integrate direct în produsul tău cu teste, reguli clare de siguranță și costuri lunare previzibile.", meta: "în medie: 2–6 săptămâni" },
+      { no: "06", title: "Funcționalități AI", body: "Modele LLM integrate direct în produsul tău cu teste, reguli clare de siguranță și costuri lunare previzibile.", meta: "în medie: 2–6 săptămâni" },
       { no: "07", title: "Consultanță tehnică", body: "O a doua opinie despre arhitectură, recrutare sau cod. Uneori, cel mai bun sfat tehnic este să NU construiești.", meta: "tarif orar sau zilnic" },
       { no: "08", title: "Preluare & salvare proiecte", body: "Ai un proiect lăsat pe jumătate de alt dezvoltator? Îi fac un audit cinstit și fie îl duc la capăt, fie îl refacem de la zero.", meta: "întotdeauna încep cu un audit" },
     ],

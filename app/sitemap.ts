@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { locales } from "@/lib/i18n";
 
-const BASE_URL = process.env.SITE_URL ?? "https://lexcode.dev";
+const BASE_URL = process.env.SITE_URL ?? "https://lexcode.ro";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return locales.map((locale) => ({

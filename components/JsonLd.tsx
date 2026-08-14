@@ -1,6 +1,6 @@
 import { CONTACT_EMAIL } from "@/lib/data";
 
-const BASE_URL = process.env.SITE_URL ?? "https://lexcode.dev";
+const BASE_URL = process.env.SITE_URL ?? "https://lexcode.ro";
 
 export default function JsonLd() {
   const schema = {

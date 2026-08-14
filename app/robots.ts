@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = process.env.SITE_URL ?? "https://lexcode.dev";
+const BASE_URL = process.env.SITE_URL ?? "https://lexcode.ro";
 
 export default function robots(): MetadataRoute.Robots {
   return {

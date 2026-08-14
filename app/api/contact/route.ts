@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     `;
 
     await resend.emails.send({
-      from: "Lexcode <noreply@lexcode.dev>",
+      from: "Lexcode <noreply@lexcode.ro>",
       to: process.env.CONTACT_EMAIL!,
       replyTo: email,
       subject: `New enquiry from ${name}`,

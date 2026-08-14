@@ -11,7 +11,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 
-const BASE_URL = process.env.SITE_URL ?? "https://lexcode.dev";
+const BASE_URL = process.env.SITE_URL ?? "https://lexcode.ro";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
