@@ -28,6 +28,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
   };
 
+  const ogImage = { url: "/opengraph-image", width: 1200, height: 630 };
+
   if (locale === "ro") {
     return {
       alternates,
@@ -39,6 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         description: "Tu descrii. Eu programez.",
         type: "website",
         url: `${BASE_URL}/ro`,
+        images: [ogImage],
       },
     };
   }
@@ -53,6 +56,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: "Words in. Software out.",
       type: "website",
       url: `${BASE_URL}/en`,
+      images: [ogImage],
     },
   };
 }
