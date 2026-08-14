@@ -12,6 +12,10 @@ const archivo = Archivo({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.SITE_URL ??
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
+  ),
   title: "Lexcode — Software studio of one",
   description:
     "Tell me what you need. I'll build the thing that does it. Web apps, mobile apps, internal tools and AI features — by Alex.",
