@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import { Turnstile } from "@marsidev/react-turnstile";
 import SectionLabel from "./ui/SectionLabel";
 import { CONTACT_EMAIL } from "@/lib/data";
 import type { Translations } from "@/lib/i18n/types";
@@ -11,6 +12,7 @@ type BookingT = Translations["booking"];
 
 export default function Contact({ t, tBooking }: { t: ContactT; tBooking: BookingT }) {
   const [bookingOpen, setBookingOpen] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const [sent, setSent] = useState(false);
   const [selectedTiming, setSelectedTiming] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
@@ -37,7 +39,7 @@ export default function Contact({ t, tBooking }: { t: ContactT; tBooking: Bookin
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message, timing: selectedTiming }),
+        body: JSON.stringify({ name, email, message, timing: selectedTiming, turnstileToken }),
       });
       if (!res.ok) throw new Error();
       setSent(true);
@@ -141,6 +143,12 @@ export default function Contact({ t, tBooking }: { t: ContactT; tBooking: Bookin
                   ))}
                 </div>
               </div>
+
+              <Turnstile
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                onSuccess={setTurnstileToken}
+                onExpire={() => setTurnstileToken(null)}
+              />
 
               {error && (
                 <div className="text-[13px] text-[var(--color-accent-400)]">{error}</div>

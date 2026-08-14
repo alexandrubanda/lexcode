@@ -6,15 +6,20 @@ import {
   createBookingEvent,
   formatBucharestDateTime,
 } from "@/lib/google-calendar";
+import { verifyTurnstile } from "@/lib/turnstile";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
   try {
-    const { name, email, message, slot } = await req.json();
+    const { name, email, message, slot, turnstileToken } = await req.json();
 
     if (!name || !email || !slot) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+    }
+
+    if (!turnstileToken || !(await verifyTurnstile(turnstileToken))) {
+      return NextResponse.json({ error: "Invalid captcha" }, { status: 403 });
     }
 
     const slotStart = new Date(slot);

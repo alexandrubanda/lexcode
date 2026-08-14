@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { Turnstile } from "@marsidev/react-turnstile";
 import type { Translations } from "@/lib/i18n/types";
 
 type BookingT = Translations["booking"];
@@ -26,6 +27,7 @@ export default function BookingModal({
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [meetLink, setMeetLink] = useState<string | null>(null);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -86,6 +88,7 @@ export default function BookingModal({
           email: email.trim(),
           message: message.trim() || null,
           slot: selectedSlot,
+          turnstileToken,
         }),
       });
       const data = await res.json();
@@ -294,6 +297,12 @@ export default function BookingModal({
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   className="bg-transparent border-2 border-[var(--color-neutral-700)] text-[var(--color-text)] text-[16px] p-3 outline-none focus:border-[var(--color-accent)] transition-colors resize-none placeholder:text-[var(--color-neutral-500)]"
+                />
+
+                <Turnstile
+                  siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                  onSuccess={setTurnstileToken}
+                  onExpire={() => setTurnstileToken(null)}
                 />
 
                 {error && (
