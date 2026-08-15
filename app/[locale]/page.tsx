@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates,
     title: "Lexcode - Describe it. I build it.",
     description:
-      "Custom web apps, mobile apps,i nternal tools and AI features. 8+ years of shipping production software. One dedicated developer working directly with you.",
+      "Custom web apps, mobile apps, internal tools and AI features. 8+ years of shipping production software. One dedicated developer working directly with you.",
     openGraph: {
       title: "Lexcode - Describe it. I build it.",
       description: "Custom web apps, mobile apps, internal tools, and AI features. 8+ years of shipping production software. One dedicated developer working directly with you.",
