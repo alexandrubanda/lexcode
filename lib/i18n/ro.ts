@@ -134,5 +134,10 @@ export const ro: Translations = {
   footer: {
     tagline: "Tu descrii. Eu programez.",
     byline: "Construit de omul cu care vei lucra.",
+    legal: {
+      terms: "Termeni și Condiții",
+      privacy: "Confidențialitate",
+      cookies: "Cookie-uri",
+    },
   },
 };

@@ -134,5 +134,10 @@ export const en: Translations = {
   footer: {
     tagline: "Words in. Software out.",
     byline: "Built by the person you’ll be working with.",
+    legal: {
+      terms: "Terms of Service",
+      privacy: "Privacy Policy",
+      cookies: "Cookie Policy",
+    },
   },
 };

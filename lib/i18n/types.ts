@@ -107,5 +107,10 @@ export type Translations = {
   footer: {
     tagline: string;
     byline: string;
+    legal: {
+      terms: string;
+      privacy: string;
+      cookies: string;
+    };
   };
 };

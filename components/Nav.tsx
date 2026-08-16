@@ -53,6 +53,9 @@ function openBooking() {
 
 export default function Nav({ t }: { t: NavT }) {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/" || pathname === "/en";
+  const logoHref = isHome ? "#top" : pathname.startsWith("/en") ? "/en" : "/";
 
   const links = [
     { label: t.services, href: "#services" },
@@ -63,7 +66,7 @@ export default function Nav({ t }: { t: NavT }) {
   return (
     <nav className="sticky top-0 z-20 bg-[var(--color-bg)] border-b-2 border-[var(--color-text)]">
       <div className="max-w-[1240px] mx-auto px-5 md:px-10 py-[14px] flex items-center justify-between gap-6">
-        <Logo />
+        <Logo href={logoHref} />
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-7">

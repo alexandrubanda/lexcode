@@ -85,7 +85,7 @@ export default async function LocalePage({ params }: PageProps) {
         <About t={t.about} />
         <Contact t={t.contact} tBooking={t.booking} />
       </main>
-      <Footer t={t.footer} />
+      <Footer t={t.footer} locale={locale} />
     </>
   );
 }

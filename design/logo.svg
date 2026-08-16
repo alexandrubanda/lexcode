@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 143 34" width="143" height="34">
+  <!-- Mark: outer border -->
+  <rect x="0" y="0" width="34" height="34" fill="#201E1D"/>
+  <!-- Mark: inner background -->
+  <rect x="2" y="2" width="30" height="30" fill="#F3F2F2"/>
+  <!-- Bar: full-width top line inside padding -->
+  <rect x="8" y="8" width="18" height="3" fill="#201E1D"/>
+  <!-- Dot: bottom-left accent square -->
+  <rect x="8" y="17" width="9" height="9" fill="#EC3013"/>
+
+  <!-- Wordmark -->
+  <text
+    x="46"
+    y="17"
+    dominant-baseline="central"
+    font-family="Archivo, sans-serif"
+    font-size="22"
+    font-weight="800"
+    letter-spacing="-0.66"
+    fill="#201E1D"
+  >Lexcode</text>
+</svg>
