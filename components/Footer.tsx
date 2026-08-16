@@ -44,6 +44,7 @@ export default function Footer({ t, locale }: { t: FooterT; locale: string }) {
             <Link
               key={key}
               href={paths[key]}
+              prefetch={false}
               className="text-[12px] font-mono text-[var(--color-neutral-500)] hover:text-[var(--color-text)] no-underline transition-colors"
             >
               {t.legal[key]}
