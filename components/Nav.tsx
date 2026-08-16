@@ -84,25 +84,28 @@ export default function Nav({ t }: { t: NavT }) {
           <LocaleSwitcher bordered />
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="md:hidden flex flex-col justify-center gap-[5px] w-8 h-8 bg-transparent border-0 cursor-pointer p-0"
-          aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span
-            className="block h-[2px] bg-[var(--color-text)] transition-transform origin-center"
-            style={{ transform: open ? "translateY(7px) rotate(45deg)" : undefined }}
-          />
-          <span
-            className="block h-[2px] bg-[var(--color-text)] transition-opacity"
-            style={{ opacity: open ? 0 : 1 }}
-          />
-          <span
-            className="block h-[2px] bg-[var(--color-text)] transition-transform origin-center"
-            style={{ transform: open ? "translateY(-7px) rotate(-45deg)" : undefined }}
-          />
-        </button>
+        {/* Mobile: locale + hamburger grouped on the right */}
+        <div className="md:hidden flex items-center gap-4">
+          <LocaleSwitcher />
+          <button
+            className="flex flex-col justify-center gap-[5px] w-8 h-8 bg-transparent border-0 cursor-pointer p-0"
+            aria-label={open ? "Close menu" : "Open menu"}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span
+              className="block h-[2px] bg-[var(--color-text)] transition-transform origin-center"
+              style={{ transform: open ? "translateY(7px) rotate(45deg)" : undefined }}
+            />
+            <span
+              className="block h-[2px] bg-[var(--color-text)] transition-opacity"
+              style={{ opacity: open ? 0 : 1 }}
+            />
+            <span
+              className="block h-[2px] bg-[var(--color-text)] transition-transform origin-center"
+              style={{ transform: open ? "translateY(-7px) rotate(-45deg)" : undefined }}
+            />
+          </button>
+        </div>
       </div>
 
       {/* Mobile drawer */}
@@ -122,9 +125,6 @@ export default function Nav({ t }: { t: NavT }) {
             <Button onClick={() => { setOpen(false); openBooking(); }} size="lg" className="self-start mt-2">
               {t.bookCall}
             </Button>
-            <div className="pt-3 border-t-2 border-[var(--color-neutral-200)]">
-              <LocaleSwitcher />
-            </div>
           </div>
         </div>
       )}

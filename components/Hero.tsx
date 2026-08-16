@@ -29,14 +29,14 @@ export default function Hero({ t }: { t: HeroT }) {
         {/* Right: widget */}
         <div className="lg:border-l-2 lg:border-[var(--color-divider)] flex flex-col">
           <div className="flex-1 min-h-[300px] lg:min-h-[340px] bg-[var(--color-surface)] p-8 md:p-10 flex flex-col justify-center gap-5">
-            <div className="text-[11px] font-mono text-[var(--color-neutral-700)]">{t.widget.inputLabel}</div>
+            <div className="text-[15px] md:text-[13px] font-mono text-[var(--color-neutral-700)]">{t.widget.inputLabel}</div>
             <div className="bg-[var(--color-bg)] border-2 border-[var(--color-text)] p-4">
               <div className="text-[17px] font-extrabold tracking-[-0.015em] leading-[1.3]">
                 {t.widget.quote}
               </div>
             </div>
             <div className="h-[2px] bg-[var(--color-divider)]" />
-            <div className="text-[11px] font-mono text-[var(--color-neutral-700)]">{t.widget.outputLabel}</div>
+            <div className="text-[15px] md:text-[13px] font-mono text-[var(--color-neutral-700)]">{t.widget.outputLabel}</div>
             <div className="bg-[var(--color-bg)] border-2 border-[var(--color-text)]">
               <div className="flex items-center gap-[6px] px-[10px] py-2 border-b-2 border-[var(--color-text)]">
                 <div className="w-2 h-2 bg-[var(--color-text)]" />
