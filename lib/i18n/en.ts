@@ -10,7 +10,7 @@ export const en: Translations = {
   hero: {
     badge: "Software studio of one · available for work",
     heading: "Tell me what you need. I’ll build the thing that does it.",
-    body: "I’m Alex, an engineer who takes a described problem and returns working software. Web apps, mobile apps, internal tools, AI features. You talk in plain language, I handle the rest.",
+    body: "I’m Alex, a software engineer who takes a described problem and returns working software. Web apps, mobile apps, internal tools, AI features. You talk in plain language, I handle the rest.",
     ctaBook: "Book a 30-min call →",
     ctaDescribe: "Describe your project",
     widget: {
@@ -19,6 +19,9 @@ export const en: Translations = {
       quote: "“People should be able to book a slot online, and I want to stop answering the phone.”",
       pickTime: "Pick a time",
       confirmBooking: "Confirm booking",
+      confirmedMsg: "Booking confirmed",
+      tryAgain: "reset",
+      demoLabel: "interactive demo",
     },
   },
   services: {
@@ -26,17 +29,15 @@ export const en: Translations = {
     heading: "Whatever the idea is, it ends up as something people can actually use.",
     subtitle: "Most projects are one of these. If yours is a mix, that’s normal. Let me know in a call.",
     items: [
-      { no: "01", title: "Web apps & SaaS", body: "Dashboards, portals, subscription products. Auth, billing and admin included", meta: "typical: 4–10 weeks" },
-      { no: "02", title: "MVP builds, 0→1", body: "The smallest version of your idea that real users can pay for", meta: "typical: 4–8 weeks" },
-      { no: "03", title: "Websites & landing pages", body: "Fast, findable, and yours to edit. For when the site is the storefront and it needs to convert.", meta: "typical: 1–3 weeks" },
-      { no: "04", title: "Mobile apps", body: "iOS and Android from one codebase, through review and into the stores", meta: "typical: 6–12 weeks" },
-      { no: "05", title: "Automation & internal tools", body: "The spreadsheet everyone edits at once, the copy-paste job someone does every Monday turned into software.", meta: "typical: 1–4 weeks" },
-      { no: "06", title: "AI features", body: "LLMs wired into your product with evaluation, guardrails and a bill you can predict.", meta: "typical: 2–6 weeks" },
-      { no: "07", title: "Technical consulting", body: "A second opinion on architecture, hiring or a codebase you inherited. Sometimes the answer is don’t build it.", meta: "hourly or day rate" },
-      { no: "08", title: "Rescue work", body: "A half-finished project from another developer, audited honestly and either finished or replaced.", meta: "audit first, always" },
+      { no: "01", title: "Custom web app development", body: "I build custom software solutions tailored to your business: from management dashboards and secure client portals to full-stack web applications.", meta: "typical: 4–10 weeks" },
+      { no: "02", title: "Website Development & Landing Pages", body: "Professional business website development services. Fast, SEO-optimized, and easy to manage—ideal if you need an online presence that actually converts visitors into clients.", meta: "typical: 1–3 weeks" },
+      { no: "03", title: "Mobile App Development", body: "I build mobile applications for your business, optimized for both iOS and Android. I work directly with you throughout the entire project, handling everything from development to App Store and Google Play approval and release.", meta: "typical: 6–12 weeks" },
+      { no: "04", title: "Process Automation & Custom Software", body: "I build custom software and internal automation tools that replace tedious copy-paste work and cluttered spreadsheets. I connect your existing tools or build dedicated dashboards so your team can work faster and error-free.", meta: "typical: 1–4 weeks" },
+      { no: "05", title: "AI Integration & Custom LLM Solutions", body: "LLMs seamlessly integrated directly into your product with rigorous evaluation, clear safety guardrails, and predictable monthly API costs.", meta: "typical: 2–6 weeks" },
+      { no: "06", title: "Rescue work", body: "A half-finished project from another developer, audited honestly and either finished or replaced.", meta: "audit first, always" },
     ],
     cta: {
-      no: "09",
+      no: "07",
       title: "Not sure which of these you need?",
       body: "That’s the most common way people arrive here. Describe the problem and I’ll name the shape of it.",
       link: "Book a 30-min call →",
@@ -70,7 +71,7 @@ export const en: Translations = {
     label: "04 — Who you’re hiring",
     heading: "Hi, I’m Alex.",
     body1: "I spent years building production software inside engineering teams. Lexcode is that same standard of work, without the layers in between.",
-    body2: "The name comes from my own — Alex — and from lexis: words. That’s the actual job. You describe a problem in your language, I turn it into an interface, a database and a deploy that solves it.",
+    body2: "The name comes from my own: Alex and from lexis: words. That’s the actual job. You describe a problem in your language, I turn it into an interface, a database and a deploy that solves it.",
     comparison: {
       you: "You",
       agencyLabel: "hiring an agency",

@@ -22,6 +22,9 @@ export type Translations = {
       quote: string;
       pickTime: string;
       confirmBooking: string;
+      confirmedMsg: string;
+      tryAgain: string;
+      demoLabel: string;
     };
   };
   services: {

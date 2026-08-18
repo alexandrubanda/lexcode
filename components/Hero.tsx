@@ -1,5 +1,6 @@
 import BookingButton from "./ui/BookingButton";
 import ScrollButton from "./ui/ScrollButton";
+import HeroWidget from "./ui/HeroWidget";
 import type { Translations } from "@/lib/i18n/types";
 
 type HeroT = Translations["hero"];
@@ -28,6 +29,13 @@ export default function Hero({ t }: { t: HeroT }) {
 
         {/* Right: widget */}
         <div className="lg:border-l-2 lg:border-[var(--color-divider)] flex flex-col">
+          {/* Demo label strip */}
+          <div className="flex items-center gap-2 px-8 md:px-10 py-[14px] border-b-2 border-[var(--color-divider)]">
+            <div className="w-2 h-2 bg-[var(--color-accent)]" />
+            <span className="text-[12px] font-mono font-extrabold tracking-[0.1em] uppercase text-[var(--color-text)]">
+              {t.widget.demoLabel}
+            </span>
+          </div>
           <div className="flex-1 min-h-[300px] lg:min-h-[340px] bg-[var(--color-surface)] p-8 md:p-10 flex flex-col justify-center gap-5">
             <div className="text-[15px] md:text-[13px] font-mono text-[var(--color-neutral-700)]">{t.widget.inputLabel}</div>
             <div className="bg-[var(--color-bg)] border-2 border-[var(--color-text)] p-4">
@@ -37,34 +45,12 @@ export default function Hero({ t }: { t: HeroT }) {
             </div>
             <div className="h-[2px] bg-[var(--color-divider)]" />
             <div className="text-[15px] md:text-[13px] font-mono text-[var(--color-neutral-700)]">{t.widget.outputLabel}</div>
-            <div className="bg-[var(--color-bg)] border-2 border-[var(--color-text)]">
-              <div className="flex items-center gap-[6px] px-[10px] py-2 border-b-2 border-[var(--color-text)]">
-                <div className="w-2 h-2 bg-[var(--color-text)]" />
-                <div className="w-2 h-2 bg-[var(--color-text)]" />
-                <div className="w-2 h-2 bg-[var(--color-accent)]" />
-                <div className="ml-2 text-[10px] font-mono text-[var(--color-neutral-600)]">booking.yourshop.com</div>
-              </div>
-              <div className="p-4 flex flex-col gap-3">
-                <div className="text-[13px] font-extrabold tracking-[-0.01em]">{t.widget.pickTime}</div>
-                <div className="grid grid-cols-4 gap-1">
-                  {["13:00", "13:30", "14:30", "15:00"].map((slot, i) => (
-                    <div
-                      key={slot}
-                      className="text-[10px] font-extrabold py-2 pl-[6px]"
-                      style={{
-                        background: i === 2 ? "var(--color-accent)" : "var(--color-neutral-200)",
-                        color: i === 2 ? "var(--color-bg)" : "var(--color-neutral-500)",
-                      }}
-                    >
-                      {slot}
-                    </div>
-                  ))}
-                </div>
-                <div className="bg-[var(--color-accent)] text-[var(--color-bg)] text-[10px] font-extrabold py-[9px] px-3 self-start">
-                  {t.widget.confirmBooking}
-                </div>
-              </div>
-            </div>
+            <HeroWidget
+              pickTime={t.widget.pickTime}
+              confirmBooking={t.widget.confirmBooking}
+              confirmedMsg={t.widget.confirmedMsg}
+              tryAgain={t.widget.tryAgain}
+            />
           </div>
         </div>
 
