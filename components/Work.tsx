@@ -202,8 +202,8 @@ export default function Work({ t }: { t: WorkT }) {
             {illustrations[i]}
             <div className="pt-[18px] flex flex-col gap-[6px]">
               <div className="text-[11px] font-mono text-[var(--color-neutral-600)]">{item.tag}</div>
-              <div className="text-[20px] font-extrabold tracking-[-0.02em]">{item.title}</div>
-              <div className="text-[14px] leading-[1.55] text-[var(--color-neutral-800)]">{item.body}</div>
+              <h3 className="text-[20px] font-extrabold tracking-[-0.02em] m-0">{item.title}</h3>
+              <p className="text-[14px] leading-[1.55] text-[var(--color-neutral-800)] m-0">{item.body}</p>
             </div>
           </div>
         ))}

@@ -30,8 +30,8 @@ export default function Services({ t }: { t: ServicesT }) {
             style={{ borderRight: "2px solid var(--color-divider)", borderBottom: "2px solid var(--color-divider)" }}
           >
             <div className="text-[11px] font-mono text-[var(--color-accent)]">{s.no}</div>
-            <div className="text-[20px] md:text-[22px] font-extrabold tracking-[-0.02em] leading-[1.1]">{s.title}</div>
-            <div className="text-[14px] leading-[1.55] text-[var(--color-neutral-800)]">{s.body}</div>
+            <h3 className="text-[20px] md:text-[22px] font-extrabold tracking-[-0.02em] leading-[1.1] m-0">{s.title}</h3>
+            <p className="text-[14px] leading-[1.55] text-[var(--color-neutral-800)] m-0">{s.body}</p>
             <div className="mt-auto text-[12px] font-mono text-[var(--color-neutral-600)]">{s.meta}</div>
           </div>
         ))}
